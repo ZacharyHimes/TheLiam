@@ -1,2 +1,1 @@
-# TheLiam
-Hotel Reservation Application
+# HotelReservation
