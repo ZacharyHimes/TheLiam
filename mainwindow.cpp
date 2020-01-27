@@ -76,3 +76,46 @@ void MainWindow::on_BedProceed_2_clicked()
 {
       ui->stackedWidget->setCurrentIndex(6);
 }
+
+void MainWindow::on_ResInput_editingFinished()
+{
+
+}
+
+void MainWindow::on_VisaButton_clicked()
+{
+    ui->CardEntryLine->setInputMask("");
+    ui->CardEntryLine->setInputMask("4999-9999-9999-9999;#");
+}
+
+void MainWindow::on_MasterCardButton_clicked()
+{
+    ui->CardEntryLine->setInputMask("");
+    ui->CardEntryLine->setInputMask("5999-9999-9999-9999;#");
+
+}
+
+void MainWindow::on_DiscoverButton_clicked()
+{
+    ui->CardEntryLine->setInputMask("");
+    ui->CardEntryLine->setInputMask("6999-9999-9999-9999;#");
+
+}
+
+void MainWindow::on_AmericanExpressButton_clicked()
+{
+    ui->CardEntryLine->setInputMask("");
+    ui->CardEntryLine->setInputMask("3999-999999-99999;#");
+
+}
+
+void MainWindow::on_CardEntryLine_editingFinished()
+{
+    ui->stackedWidget->setCurrentIndex(7);
+
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+
+}

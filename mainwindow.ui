@@ -476,7 +476,7 @@
 background-color: rgb(230, 230, 230);</string>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page"/>
     <widget class="QWidget" name="WelcomePage">
@@ -739,7 +739,7 @@ QPushButton:hover
        </rect>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/Desktop/Logo3.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/Logo3.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="Line" name="Line">
@@ -844,6 +844,29 @@ QPushButton:hover
       </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ReservationLabel">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>410</y>
+        <width>120</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Reservation Name:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="ResInput">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>410</y>
+        <width>180</width>
+        <height>40</height>
+       </rect>
       </property>
      </widget>
     </widget>
@@ -1953,6 +1976,19 @@ QPushButton:hover
        </property>
       </widget>
      </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>189</x>
+        <y>184</y>
+        <width>251</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="PaymentInfo">
      <widget class="QRadioButton" name="VisaButton">
@@ -2059,7 +2095,7 @@ QPushButton:hover
        <bool>false</bool>
       </property>
       <property name="inputMask">
-       <string>9999-9999-9999;_</string>
+       <string/>
       </property>
       <property name="frame">
        <bool>false</bool>
@@ -2367,7 +2403,7 @@ QPushButton:hover
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>24</height>
     </rect>
    </property>
   </widget>

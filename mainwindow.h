@@ -44,6 +44,20 @@ private slots:
 
      void on_BedProceed_2_clicked();
 
+     void on_ResInput_editingFinished();
+
+     void on_VisaButton_clicked();
+
+     void on_MasterCardButton_clicked();
+
+     void on_DiscoverButton_clicked();
+
+     void on_AmericanExpressButton_clicked();
+
+     void on_CardEntryLine_editingFinished();
+
+     void on_pushButton_clicked();
+
 private:
      int checkButton();
      bool kingButton,atriumButton, queenButton, standardButton;
