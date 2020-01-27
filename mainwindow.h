@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QString>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -27,7 +28,11 @@ private slots:
 
      void on_QueenButton_clicked();
 
-
+     /**
+      * @brief calculateTotalCost Calculates the total cost for the user's stay
+      * @return returns the total cost
+      */
+     float calculateTotalCost();
 
 
      int on_AdultSpinbox_valueChanged(int numAdults);
@@ -42,27 +47,34 @@ private slots:
 
      void on_AtriumButton_clicked();
 
+
+     void on_visaradio_clicked();
+
+     void on_masterradio_clicked();
+
+     void on_discoradio_clicked();
+
+     void on_americanradio_clicked();
+
+     void on_pushButton_2_clicked();
+
+
      void on_BedProceed_2_clicked();
 
-     void on_ResInput_editingFinished();
+     void on_proceedButton_clicked();
 
-     void on_VisaButton_clicked();
-
-     void on_MasterCardButton_clicked();
-
-     void on_DiscoverButton_clicked();
-
-     void on_AmericanExpressButton_clicked();
-
-     void on_CardEntryLine_editingFinished();
-
-     void on_pushButton_clicked();
+     void on_pushButton_3_clicked();
 
 private:
-     int checkButton();
-     bool kingButton,atriumButton, queenButton, standardButton;
+    int checkButton();
+    bool kingButton,atriumButton, queenButton, standardButton;
     bool bedProceed = false;
-
+    bool parking = false;
+    int adultsStaying = 0;
+    int kidsStaying = 0;
+    int nightsStaying = 0;
+    QString CreditCardNumber;
+    QString RezName;
 
 
 private:
