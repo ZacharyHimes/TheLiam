@@ -104,8 +104,8 @@ public:
     QFrame *frame;
     QLabel *label_4;
     QLabel *ExpLabel;
-    QSpinBox *spinBox;
-    QSpinBox *spinBox_2;
+    QSpinBox *MonthSpin;
+    QSpinBox *YearSpin;
     QWidget *page_7;
     QPushButton *ConfirmButton;
     QFrame *frame_41;
@@ -129,10 +129,12 @@ public:
     QLabel *label_27;
     QLabel *TotalOutput;
     QLabel *label_43;
+    QLabel *ExpOutputLabel;
     QFrame *frame_61;
     QLabel *label_22;
     QLabel *NumNightsOutput;
     QLabel *label_45;
+    QLabel *ExpOutput;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -750,15 +752,16 @@ public:
         ExpLabel = new QLabel(page_6);
         ExpLabel->setObjectName(QString::fromUtf8("ExpLabel"));
         ExpLabel->setGeometry(QRect(230, 320, 90, 30));
-        spinBox = new QSpinBox(page_6);
-        spinBox->setObjectName(QString::fromUtf8("spinBox"));
-        spinBox->setGeometry(QRect(350, 320, 42, 23));
-        spinBox->setMaximum(12);
-        spinBox_2 = new QSpinBox(page_6);
-        spinBox_2->setObjectName(QString::fromUtf8("spinBox_2"));
-        spinBox_2->setGeometry(QRect(400, 320, 42, 23));
-        spinBox_2->setMinimum(20);
-        spinBox_2->setMaximum(50);
+        MonthSpin = new QSpinBox(page_6);
+        MonthSpin->setObjectName(QString::fromUtf8("MonthSpin"));
+        MonthSpin->setGeometry(QRect(350, 320, 42, 23));
+        MonthSpin->setMinimum(1);
+        MonthSpin->setMaximum(12);
+        YearSpin = new QSpinBox(page_6);
+        YearSpin->setObjectName(QString::fromUtf8("YearSpin"));
+        YearSpin->setGeometry(QRect(400, 320, 42, 23));
+        YearSpin->setMinimum(20);
+        YearSpin->setMaximum(50);
         stackedWidget->addWidget(page_6);
         page_7 = new QWidget();
         page_7->setObjectName(QString::fromUtf8("page_7"));
@@ -860,6 +863,9 @@ public:
         label_43 = new QLabel(frame_60);
         label_43->setObjectName(QString::fromUtf8("label_43"));
         label_43->setGeometry(QRect(310, 50, 16, 31));
+        ExpOutputLabel = new QLabel(frame_60);
+        ExpOutputLabel->setObjectName(QString::fromUtf8("ExpOutputLabel"));
+        ExpOutputLabel->setGeometry(QRect(30, 80, 52, 15));
         frame_61 = new QFrame(page_7);
         frame_61->setObjectName(QString::fromUtf8("frame_61"));
         frame_61->setGeometry(QRect(120, 150, 441, 41));
@@ -878,6 +884,9 @@ public:
         label_45->setObjectName(QString::fromUtf8("label_45"));
         label_45->setGeometry(QRect(240, 20, 191, 20));
         label_45->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
+        ExpOutput = new QLabel(page_7);
+        ExpOutput->setObjectName(QString::fromUtf8("ExpOutput"));
+        ExpOutput->setGeometry(QRect(450, 310, 121, 61));
         stackedWidget->addWidget(page_7);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -963,9 +972,11 @@ public:
         label_27->setText(QCoreApplication::translate("MainWindow", "Total bill", nullptr));
         TotalOutput->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         label_43->setText(QCoreApplication::translate("MainWindow", "$", nullptr));
+        ExpOutputLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         label_22->setText(QCoreApplication::translate("MainWindow", "Amount of nights", nullptr));
         NumNightsOutput->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         label_45->setText(QCoreApplication::translate("MainWindow", "Payment Succes!", nullptr));
+        ExpOutput->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
     } // retranslateUi
 
 };

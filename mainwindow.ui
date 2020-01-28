@@ -1640,6 +1640,9 @@ border: 2px solid white;</string>
         <height>23</height>
        </rect>
       </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
       <property name="maximum">
        <number>12</number>
       </property>
@@ -2025,6 +2028,19 @@ border: 2px solid white;</string>
         <string>$</string>
        </property>
       </widget>
+      <widget class="QLabel" name="ExpOutputLabel">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>80</y>
+         <width>52</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
      </widget>
      <widget class="QFrame" name="frame_61">
       <property name="geometry">
@@ -2091,6 +2107,19 @@ border: 2px solid white;</string>
       </property>
       <property name="text">
        <string>Payment Succes!</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ExpOutput">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>310</y>
+        <width>121</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
       </property>
      </widget>
     </widget>
