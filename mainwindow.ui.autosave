@@ -469,7 +469,7 @@
      <string notr="true">background-color: rgb(198, 218, 248);</string>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page"/>
     <widget class="QWidget" name="WelcomePage">
@@ -1447,7 +1447,7 @@ a.QpushButton a:hover
        <string>MasterCard</string>
       </property>
      </widget>
-     <widget class="QRadioButton" name="DiscoverRadio">
+     <widget class="QRadioButton" name="DiscoRadio">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -1504,7 +1504,7 @@ a.QpushButton a:hover
        <string>Check  Out</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="CreditCardInfo">
+     <widget class="QLineEdit" name="CreditInfo">
       <property name="geometry">
        <rect>
         <x>300</x>
@@ -1654,7 +1654,7 @@ a.QpushButton a:hover
        <string>Reservation name:</string>
       </property>
      </widget>
-     <widget class="QLabel" name="RezOutput">
+     <widget class="QLabel" name="ResOutput">
       <property name="geometry">
        <rect>
         <x>230</x>
@@ -1732,7 +1732,7 @@ a.QpushButton a:hover
        <string>a</string>
       </property>
      </widget>
-     <widget class="QLabel" name="NumKidOutput">
+     <widget class="QLabel" name="NumKidsOutput">
       <property name="geometry">
        <rect>
         <x>230</x>
@@ -1771,9 +1771,22 @@ a.QpushButton a:hover
        <string>r</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="ConfirmButton">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>400</y>
+        <width>113</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="FinalThanks">
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="EndAllButton">
       <property name="geometry">
        <rect>
         <x>160</x>
