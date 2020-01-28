@@ -16,6 +16,8 @@ MainWindow::MainWindow(QWidget *parent)
             && !qEnvironmentVariableIsSet("QT_SCREEN_SCALE_FACTORS")) {
         QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     }
+
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
 MainWindow::~MainWindow()
@@ -58,13 +60,13 @@ double MainWindow::calculateTotalCost()
 void MainWindow::calculateRoomCost()
 {
     if(reservationRoom.RoomType == "Atrium" && reservationRoom.BedType == "King")
-        reservationRoom.CostPerNight = 350;
+        reservationRoom.CostPerNight = ATRIUM_KING;
     if(reservationRoom.RoomType == "Standard" && reservationRoom.BedType == "King")
-        reservationRoom.CostPerNight = 290;
+        reservationRoom.CostPerNight = STANDARD_KING;
     if(reservationRoom.RoomType == "Atrium" && reservationRoom.BedType == "2 Queen")
-        reservationRoom.CostPerNight = 325;
+        reservationRoom.CostPerNight = ATRIUM_QUEEN;
     if(reservationRoom.RoomType == "Standard" && reservationRoom.BedType == "2 Queen")
-        reservationRoom.CostPerNight = 284;
+        reservationRoom.CostPerNight = STANDARD_QUEEN;
 }
 
 void MainWindow::on_BedProceed_clicked()
@@ -194,7 +196,6 @@ void MainWindow::on_PayNowButton_clicked()
     ui->NumAdultsOutput->setText(QString::number(adultsStaying));
     ui->NumKidsOutput->setText(QString::number(kidsStaying));
     ui->NumNightsOutput->setText(QString::number(nightsStaying));
-    //QStringRef lastFour(&CreditCardNumber,CreditCardNumber.size()-4, CreditCardNumber.size()-2);
     QString lastFour = CreditCardNumber.right(CreditCardNumber.size()-15);
     ui->CreditOutput->setText("Ending in " + lastFour);
     ui->TotalOutput->setText(QString::number(calculateTotalCost()));
@@ -219,4 +220,28 @@ void MainWindow::on_ResProceedButton_clicked()
 
     if(RezName.size() > 0)
           ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_NumAdultsBox_valueChanged(int arg1)
+{
+    int maxPeople = 0;
+    if(reservationRoom.BedType == "King"){
+       maxPeople = 3;
+            ui->NumKidsBox->setMaximum(maxPeople - (ui->NumAdultsBox->value()));
+    } else if(reservationRoom.BedType == "2 Queen"){
+        maxPeople = 4;
+            ui->NumKidsBox->setMaximum(maxPeople - (ui->NumAdultsBox->value()));
+    }
+}
+
+void MainWindow::on_NumKidsBox_valueChanged(int arg1)
+{
+    int maxPeople = 0;
+    if(reservationRoom.BedType == "King"){
+       maxPeople = 3;
+            ui->NumAdultsBox->setMaximum(maxPeople - ui->NumKidsBox->value());
+    } else if(reservationRoom.BedType == "2 Queen"){
+        maxPeople = 4;
+            ui->NumAdultsBox->setMaximum(maxPeople - ui->NumKidsBox->value());
+    }
 }

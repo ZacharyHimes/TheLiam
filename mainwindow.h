@@ -82,7 +82,15 @@ private slots:
 
      void on_ResProceedButton_clicked();
 
+     void on_NumAdultsBox_valueChanged(int arg1);
+
+     void on_NumKidsBox_valueChanged(int arg1);
+
 private:
+    const int ATRIUM_KING = 350;
+    const int STANDARD_KING = 290;
+    const int ATRIUM_QUEEN = 325;
+    const int STANDARD_QUEEN = 284;
     int checkButton();
     bool kingButton,atriumButton, queenButton, standardButton;
     bool bedProceed = false;

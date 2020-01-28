@@ -27,7 +27,7 @@
      <string notr="true">background-color: rgba(68, 67, 85, 228);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="WelcomePage">
      <widget class="QLabel" name="LiamLogo">
@@ -686,9 +686,7 @@ background-color: rgb(255, 253, 200);
         </palette>
        </property>
        <property name="styleSheet">
-        <string notr="true">
-
-</string>
+        <string notr="true"/>
        </property>
       </widget>
      </widget>
@@ -766,6 +764,9 @@ border: 2px solid white;</string>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
+      <property name="maximum">
+       <number>99</number>
+      </property>
      </widget>
      <widget class="QSpinBox" name="NumAdultsBox">
       <property name="geometry">
@@ -782,6 +783,12 @@ border: 2px solid white;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>3</number>
       </property>
      </widget>
      <widget class="QPushButton" name="ProceedGuests">
@@ -2053,7 +2060,7 @@ border: 2px solid white;</string>
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>28</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
