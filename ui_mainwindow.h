@@ -41,6 +41,7 @@ public:
     QWidget *page_3;
     QLineEdit *ResInput_2;
     QLabel *label_10;
+    QPushButton *pushButton;
     QWidget *BedSelection;
     QLabel *label_5;
     QPushButton *KingButton;
@@ -257,7 +258,10 @@ public:
         ResInput_2->setGeometry(QRect(310, 210, 190, 30));
         label_10 = new QLabel(page_3);
         label_10->setObjectName(QString::fromUtf8("label_10"));
-        label_10->setGeometry(QRect(270, 240, 121, 30));
+        label_10->setGeometry(QRect(160, 210, 121, 30));
+        pushButton = new QPushButton(page_3);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(340, 340, 75, 23));
         stackedWidget->addWidget(page_3);
         BedSelection = new QWidget();
         BedSelection->setObjectName(QString::fromUtf8("BedSelection"));
@@ -406,6 +410,8 @@ public:
         NumAdultsBox = new QSpinBox(NumberOfGuests);
         NumAdultsBox->setObjectName(QString::fromUtf8("NumAdultsBox"));
         NumAdultsBox->setGeometry(QRect(230, 140, 41, 31));
+        NumAdultsBox->setMinimum(1);
+        NumAdultsBox->setMaximum(4);
         AdultLabel = new QLabel(NumberOfGuests);
         AdultLabel->setObjectName(QString::fromUtf8("AdultLabel"));
         AdultLabel->setGeometry(QRect(180, 110, 151, 21));
@@ -558,7 +564,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(8);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -571,6 +577,7 @@ public:
         WelcomeButton->setText(QApplication::translate("MainWindow", "Reserve a Room", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "      Logo", nullptr));
         label_10->setText(QApplication::translate("MainWindow", "Reservation name:", nullptr));
+        pushButton->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
         label_5->setText(QApplication::translate("MainWindow", "Bed & Room Selection", nullptr));
         KingButton->setText(QApplication::translate("MainWindow", "King ", nullptr));
         QueenButton->setText(QApplication::translate("MainWindow", "2 Queens", nullptr));

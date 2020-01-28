@@ -34,7 +34,7 @@ private slots:
       * @brief calculateTotalCost Calculates the total cost for the user's stay
       * @return returns the total cost
       */
-     float calculateTotalCost();
+     double calculateTotalCost();
 
      /**
       * @brief calculateRoomCost Calculates the total cost of the room for one night and stores it in the reservationRoom cost.
@@ -78,6 +78,10 @@ private slots:
 
      void on_PayNowButton_clicked();
 
+     void on_pushButton_clicked();
+
+     void on_ProceedCharges_clicked();
+
 private:
     int checkButton();
     bool kingButton,atriumButton, queenButton, standardButton;
@@ -86,6 +90,7 @@ private:
     int adultsStaying = 0;
     int kidsStaying = 0;
     int nightsStaying = 0;
+    bool CreditCardType = false; //If false, it is not American and has 16 characters
     QString CreditCardNumber;
     QString RezName;
     QDate reservationStartDate;
