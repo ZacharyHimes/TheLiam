@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.6
+** Created by: Qt User Interface Compiler version 5.12.5
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -35,86 +35,75 @@ public:
     QStackedWidget *stackedWidget;
     QWidget *page;
     QWidget *WelcomePage;
+    QLabel *label;
     QPushButton *WelcomeButton;
-    QLabel *LogoLabel;
-    QFrame *Line;
+    QLabel *label_2;
+    QWidget *page_3;
+    QLineEdit *ResInput_2;
+    QLabel *label_10;
     QWidget *BedSelection;
+    QLabel *label_5;
     QPushButton *KingButton;
     QPushButton *QueenButton;
-    QFrame *HeaderFrame;
-    QLabel *HeaderText;
     QWidget *page_2;
+    QLabel *RoomTypeLabel;
     QPushButton *AtriumButton;
     QPushButton *StandardButton;
-    QFrame *frame_4;
-    QLabel *Header_7;
     QWidget *ReserveDates;
-    QPushButton *ProceedReservBttn;
-    QCalendarWidget *calendarWidget;
-    QSpinBox *NumNights;
+    QLabel *label_3;
+    QPushButton *ProceedDatesBttn;
+    QCalendarWidget *CalendarWidget;
+    QSpinBox *NumNightsBox;
     QLabel *label_6;
     QFrame *line;
-    QFrame *frame_2;
-    QLabel *Header_2;
     QWidget *NumberOfGuests;
-    QLabel *AdultLabel;
-    QLabel *childrenLabel;
-    QFrame *frame;
     QLabel *Header;
-    QFrame *line_3;
+    QSpinBox *NumAdultsBox;
+    QLabel *AdultLabel;
+    QSpinBox *NumKidsBox;
+    QLabel *childrenLabel;
+    QPushButton *ProceedGuests;
     QCheckBox *ParkingCheckBox;
-    QSpinBox *NumAdultsSpnBx;
-    QSpinBox *NumChildrenSpnBx;
-    QPushButton *ProceedBttn;
     QWidget *TotalCharge;
-    QLabel *label_7;
-    QFrame *frame_3;
-    QLabel *label_5;
-    QLabel *label_9;
-    QLabel *RoomChargeAmnt;
-    QLabel *ParkingFeeAmnt;
-    QLabel *ResortFeeAmnt;
-    QLabel *label;
-    QLabel *label_13;
-    QLabel *label_14;
-    QFrame *frame_8;
-    QLabel *Total_2;
-    QLabel *label_11;
-    QLabel *label_12;
-    QLabel *SubtotalAmntReview;
-    QLabel *TaxAmntReview;
-    QLabel *TotalAmntReview;
+    QLabel *TotalChargesHeader;
+    QPushButton *ProceedCharges;
+    QLabel *RoomTypeEdit;
+    QLabel *BedTypeLabel;
+    QLabel *BedTypeEdit;
+    QLabel *ParkingTypeLabel;
+    QLabel *RoomType;
+    QLabel *ParkingTypeEdit;
     QWidget *PaymentInfo;
-    QRadioButton *VisaButton;
-    QRadioButton *MasterCardButton;
-    QRadioButton *DiscoverButton;
-    QRadioButton *AmericanExpressButton;
+    QRadioButton *VisaRadio;
+    QRadioButton *MasterRadio;
+    QRadioButton *DiscoRadio;
+    QRadioButton *AmericanRadio;
     QPushButton *PayNowButton;
     QLabel *label_8;
-    QLineEdit *CardEntryLine;
+    QLineEdit *CreditInfo;
     QWidget *ReservatinDetails;
+    QLabel *TitleLabel;
+    QLabel *FirstLabel;
     QLabel *NumNightsLabel;
+    QLabel *RoomLabel;
     QLabel *ParkingLabel;
-    QLabel *StartDate;
-    QLabel *RoomTypeLabel;
     QLabel *NumAdultsLabel;
-    QLabel *TotalAmountLabel;
-    QLabel *label_21;
-    QLabel *label_15;
-    QLabel *label_16;
-    QLabel *label_17;
-    QLabel *label_18;
-    QLabel *label_19;
-    QLabel *label_20;
-    QFrame *DetailFrame;
-    QLabel *Total;
-    QLabel *Tax;
-    QLabel *Subtotal_2;
-    QLabel *SubtotalAmnt;
-    QLabel *TaxAmnt;
-    QLabel *TotalAmnt;
+    QLabel *CreditLabel;
+    QLabel *NumKidsLabel;
+    QLabel *TotalLabel;
+    QLabel *RezNameLabel;
+    QLabel *ResOutput;
+    QLabel *NumNightsOutput;
+    QLabel *NumAdultOutput;
+    QLabel *FirstOutput;
+    QLabel *ParkOutput;
+    QLabel *RoomOutput;
+    QLabel *NumKidsOutput;
+    QLabel *CreditOutput;
+    QLabel *TotalOutput;
+    QPushButton *ConfirmButton;
     QWidget *FinalThanks;
-    QLabel *THankYouPag;
+    QPushButton *EndAllButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -123,17 +112,16 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(800, 600);
-        MainWindow->setMinimumSize(QSize(800, 0));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
-        stackedWidget->setGeometry(QRect(20, 9, 760, 521));
+        stackedWidget->setGeometry(QRect(30, 20, 731, 531));
         QPalette palette;
         QBrush brush(QColor(0, 0, 0, 255));
         brush.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        QBrush brush1(QColor(230, 230, 230, 255));
+        QBrush brush1(QColor(198, 218, 248, 255));
         brush1.setStyle(Qt::SolidPattern);
         palette.setBrush(QPalette::Active, QPalette::Button, brush1);
         QBrush brush2(QColor(255, 255, 255, 255));
@@ -194,591 +182,375 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::Base, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Window, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::Shadow, brush);
-        QBrush brush8(QColor(198, 218, 248, 255));
-        brush8.setStyle(Qt::SolidPattern);
-        palette.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush8);
+        palette.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush1);
         palette.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush6);
         palette.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush7);
 #endif
         stackedWidget->setPalette(palette);
-        stackedWidget->setStyleSheet(QString::fromUtf8("\n"
-"background-color: rgb(230, 230, 230);"));
+        stackedWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(198, 218, 248);"));
         page = new QWidget();
         page->setObjectName(QString::fromUtf8("page"));
         stackedWidget->addWidget(page);
         WelcomePage = new QWidget();
         WelcomePage->setObjectName(QString::fromUtf8("WelcomePage"));
+        label = new QLabel(WelcomePage);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(250, 170, 251, 41));
+        QFont font;
+        font.setPointSize(24);
+        label->setFont(font);
         WelcomeButton = new QPushButton(WelcomePage);
         WelcomeButton->setObjectName(QString::fromUtf8("WelcomeButton"));
-        WelcomeButton->setGeometry(QRect(300, 230, 150, 150));
+        WelcomeButton->setGeometry(QRect(250, 280, 231, 41));
         QPalette palette1;
         palette1.setBrush(QPalette::Active, QPalette::WindowText, brush2);
-        palette1.setBrush(QPalette::Active, QPalette::Button, brush);
+        QBrush brush8(QColor(30, 39, 67, 255));
+        brush8.setStyle(Qt::SolidPattern);
+        palette1.setBrush(QPalette::Active, QPalette::Button, brush8);
         palette1.setBrush(QPalette::Active, QPalette::Text, brush2);
         palette1.setBrush(QPalette::Active, QPalette::ButtonText, brush2);
-        palette1.setBrush(QPalette::Active, QPalette::Base, brush);
-        palette1.setBrush(QPalette::Active, QPalette::Window, brush);
+        palette1.setBrush(QPalette::Active, QPalette::Base, brush8);
+        palette1.setBrush(QPalette::Active, QPalette::Window, brush8);
         QBrush brush9(QColor(255, 255, 255, 128));
         brush9.setStyle(Qt::NoBrush);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette1.setBrush(QPalette::Active, QPalette::PlaceholderText, brush9);
 #endif
         palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush2);
-        palette1.setBrush(QPalette::Inactive, QPalette::Button, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::Button, brush8);
         palette1.setBrush(QPalette::Inactive, QPalette::Text, brush2);
         palette1.setBrush(QPalette::Inactive, QPalette::ButtonText, brush2);
-        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush);
-        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush);
+        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush8);
+        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush8);
         QBrush brush10(QColor(255, 255, 255, 128));
         brush10.setStyle(Qt::NoBrush);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette1.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush10);
 #endif
         palette1.setBrush(QPalette::Disabled, QPalette::WindowText, brush2);
-        palette1.setBrush(QPalette::Disabled, QPalette::Button, brush);
+        palette1.setBrush(QPalette::Disabled, QPalette::Button, brush8);
         palette1.setBrush(QPalette::Disabled, QPalette::Text, brush2);
         palette1.setBrush(QPalette::Disabled, QPalette::ButtonText, brush2);
-        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush);
-        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush);
+        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush8);
+        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush8);
         QBrush brush11(QColor(255, 255, 255, 128));
         brush11.setStyle(Qt::NoBrush);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
         palette1.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush11);
 #endif
         WelcomeButton->setPalette(palette1);
-        QFont font;
-        font.setPointSize(19);
-        WelcomeButton->setFont(font);
         WelcomeButton->setCursor(QCursor(Qt::PointingHandCursor));
         WelcomeButton->setAutoFillBackground(false);
-        WelcomeButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"		height: 300px;\n"
-"  		width: 300px;\n"
-"  		border-radius:75%;\n"
-"		background-color: rgb(0, 0, 0);\n"
-"}\n"
-"\n"
-"\n"
-"\n"
-"QPushButton:hover\n"
-"{\n"
-"	\n"
-"	border-color: rgb(30, 39, 67);\n"
-"	\n"
-"	\n"
-"	background-color: rgb(25, 25, 25);\n"
-"	color:rgb(204, 204, 204)\n"
-"}\n"
-"\n"
-""));
+        WelcomeButton->setStyleSheet(QString::fromUtf8("background-color: rgb(30, 39, 67);\n"
+"color: rgb(255, 255, 255);"));
         WelcomeButton->setFlat(false);
-        LogoLabel = new QLabel(WelcomePage);
-        LogoLabel->setObjectName(QString::fromUtf8("LogoLabel"));
-        LogoLabel->setGeometry(QRect(200, 60, 361, 121));
-        Line = new QFrame(WelcomePage);
-        Line->setObjectName(QString::fromUtf8("Line"));
-        Line->setGeometry(QRect(180, 180, 381, 20));
-        QPalette palette2;
-        palette2.setBrush(QPalette::Active, QPalette::Button, brush1);
-        palette2.setBrush(QPalette::Active, QPalette::Base, brush1);
-        palette2.setBrush(QPalette::Active, QPalette::Window, brush1);
-        palette2.setBrush(QPalette::Inactive, QPalette::Button, brush1);
-        palette2.setBrush(QPalette::Inactive, QPalette::Base, brush1);
-        palette2.setBrush(QPalette::Inactive, QPalette::Window, brush1);
-        palette2.setBrush(QPalette::Disabled, QPalette::Button, brush1);
-        palette2.setBrush(QPalette::Disabled, QPalette::Base, brush1);
-        palette2.setBrush(QPalette::Disabled, QPalette::Window, brush1);
-        Line->setPalette(palette2);
-        Line->setFrameShape(QFrame::HLine);
-        Line->setFrameShadow(QFrame::Sunken);
+        label_2 = new QLabel(WelcomePage);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(330, 80, 81, 81));
         stackedWidget->addWidget(WelcomePage);
+        page_3 = new QWidget();
+        page_3->setObjectName(QString::fromUtf8("page_3"));
+        ResInput_2 = new QLineEdit(page_3);
+        ResInput_2->setObjectName(QString::fromUtf8("ResInput_2"));
+        ResInput_2->setGeometry(QRect(310, 210, 190, 30));
+        label_10 = new QLabel(page_3);
+        label_10->setObjectName(QString::fromUtf8("label_10"));
+        label_10->setGeometry(QRect(270, 240, 121, 30));
+        stackedWidget->addWidget(page_3);
         BedSelection = new QWidget();
         BedSelection->setObjectName(QString::fromUtf8("BedSelection"));
+        label_5 = new QLabel(BedSelection);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setGeometry(QRect(270, 50, 251, 51));
+        QFont font1;
+        font1.setPointSize(25);
+        label_5->setFont(font1);
         KingButton = new QPushButton(BedSelection);
         KingButton->setObjectName(QString::fromUtf8("KingButton"));
-        KingButton->setGeometry(QRect(230, 220, 100, 100));
-        QFont font1;
-        font1.setBold(true);
-        font1.setWeight(75);
-        KingButton->setFont(font1);
-        KingButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"		height: 300px;\n"
-"  		width: 300px;\n"
-"  		border-radius:50%;\n"
-"		border-color: rgb(30, 39, 67);\n"
-"		color: rgb(255, 255, 255);\n"
-"		background-color: rgb(0, 0, 0);\n"
-"}\n"
+        KingButton->setGeometry(QRect(280, 130, 100, 100));
+        QFont font2;
+        font2.setBold(true);
+        font2.setWeight(75);
+        KingButton->setFont(font2);
+        KingButton->setStyleSheet(QString::fromUtf8(" display:block;\n"
+"  height: 300px;\n"
+"  width: 300px;\n"
+"  border-radius: 50%;\n"
+"  border: 3px solid red;\n"
 "\n"
-"\n"
-"\n"
-"QPushButton:hover\n"
-"{\n"
-"	\n"
-"	border-color: rgb(30, 39, 67);\n"
-"	\n"
-"	\n"
-"	background-color: rgb(25, 25, 25);\n"
-"	color:rgb(204, 204, 204)\n"
-"}"));
+" "));
         QueenButton = new QPushButton(BedSelection);
         QueenButton->setObjectName(QString::fromUtf8("QueenButton"));
-        QueenButton->setGeometry(QRect(400, 220, 200, 200));
-        QueenButton->setFont(font1);
-        QueenButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"		height: 300px;\n"
-"  		width: 300px;\n"
-"  		border-radius:50%;\n"
-"		border-color: rgb(30, 39, 67);\n"
-"		color: rgb(255, 255, 255);\n"
-"		background-color: rgb(0, 0, 0);\n"
-"}\n"
-"\n"
-"\n"
-"\n"
-"QPushButton:hover\n"
-"{\n"
-"	\n"
-"	border-color: rgb(30, 39, 67);\n"
-"	\n"
-"	\n"
-"	background-color: rgb(25, 25, 25);\n"
-"	color:rgb(204, 204, 204)\n"
-"}"));
-        HeaderFrame = new QFrame(BedSelection);
-        HeaderFrame->setObjectName(QString::fromUtf8("HeaderFrame"));
-        HeaderFrame->setGeometry(QRect(250, 80, 231, 51));
-        HeaderFrame->setFrameShape(QFrame::StyledPanel);
-        HeaderFrame->setFrameShadow(QFrame::Raised);
-        HeaderText = new QLabel(HeaderFrame);
-        HeaderText->setObjectName(QString::fromUtf8("HeaderText"));
-        HeaderText->setGeometry(QRect(20, 10, 191, 31));
-        QFont font2;
-        font2.setFamily(QString::fromUtf8("Baskerville"));
-        font2.setPointSize(20);
-        HeaderText->setFont(font2);
+        QueenButton->setGeometry(QRect(410, 130, 100, 100));
+        QueenButton->setFont(font2);
+        QueenButton->setStyleSheet(QString::fromUtf8(" display:block;\n"
+"  height: 300px;\n"
+"  width: 300px;\n"
+"  border-radius: 50%;\n"
+"  border: 3px solid red;"));
         stackedWidget->addWidget(BedSelection);
         page_2 = new QWidget();
         page_2->setObjectName(QString::fromUtf8("page_2"));
+        RoomTypeLabel = new QLabel(page_2);
+        RoomTypeLabel->setObjectName(QString::fromUtf8("RoomTypeLabel"));
+        RoomTypeLabel->setGeometry(QRect(310, 70, 121, 31));
+        RoomTypeLabel->setFont(font1);
         AtriumButton = new QPushButton(page_2);
         AtriumButton->setObjectName(QString::fromUtf8("AtriumButton"));
-        AtriumButton->setGeometry(QRect(380, 200, 100, 100));
-        AtriumButton->setFont(font1);
-        AtriumButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"		height: 300px;\n"
-"  		width: 300px;\n"
-"  		border-radius:50%;\n"
-"		border-color: rgb(30, 39, 67);\n"
-"		color: rgb(255, 255, 255);\n"
-"		background-color: rgb(0, 0, 0);\n"
-"}\n"
-"\n"
-"\n"
-"\n"
-"QPushButton:hover\n"
-"{\n"
-"	\n"
-"	border-color: rgb(30, 39, 67);\n"
-"	\n"
-"	\n"
-"	background-color: rgb(25, 25, 25);\n"
-"	color:rgb(204, 204, 204)\n"
-"}"));
+        AtriumButton->setGeometry(QRect(380, 120, 100, 100));
+        AtriumButton->setFont(font2);
+        AtriumButton->setStyleSheet(QString::fromUtf8(" display:block;\n"
+"  height: 300px;\n"
+"  width: 300px;\n"
+"  border-radius: 50%;\n"
+"  border: 3px solid red;\n"
+""));
         StandardButton = new QPushButton(page_2);
         StandardButton->setObjectName(QString::fromUtf8("StandardButton"));
-        StandardButton->setGeometry(QRect(250, 200, 100, 100));
-        StandardButton->setFont(font1);
+        StandardButton->setGeometry(QRect(250, 120, 100, 100));
+        StandardButton->setFont(font2);
         StandardButton->setCursor(QCursor(Qt::PointingHandCursor));
-        StandardButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+        StandardButton->setStyleSheet(QString::fromUtf8(" display:block;\n"
+"  height: 300px;\n"
+"  width: 300px;\n"
+"  border-radius: 50%;\n"
+"  border: 3px solid red;\n"
+"a.QpushButton a:hover\n"
 "{\n"
-"		height: 300px;\n"
-"  		width: 300px;\n"
-"  		border-radius:50%;\n"
-"		border-color: rgb(30, 39, 67);\n"
-"		color: rgb(255, 255, 255);\n"
-"		background-color: rgb(0, 0, 0);\n"
-"}\n"
-"\n"
-"\n"
-"\n"
-"QPushButton:hover\n"
-"{\n"
-"	\n"
-"	border-color: rgb(30, 39, 67);\n"
-"	\n"
-"	\n"
-"	background-color: rgb(25, 25, 25);\n"
-"	color:rgb(204, 204, 204)\n"
+"	background-color: rgb(30, 39, 67);\n"
 "}"));
-        frame_4 = new QFrame(page_2);
-        frame_4->setObjectName(QString::fromUtf8("frame_4"));
-        frame_4->setGeometry(QRect(250, 70, 231, 51));
-        frame_4->setFrameShape(QFrame::StyledPanel);
-        frame_4->setFrameShadow(QFrame::Raised);
-        Header_7 = new QLabel(frame_4);
-        Header_7->setObjectName(QString::fromUtf8("Header_7"));
-        Header_7->setGeometry(QRect(20, 10, 191, 31));
-        Header_7->setFont(font2);
         stackedWidget->addWidget(page_2);
         ReserveDates = new QWidget();
         ReserveDates->setObjectName(QString::fromUtf8("ReserveDates"));
         QFont font3;
         font3.setPointSize(14);
         ReserveDates->setFont(font3);
-        ProceedReservBttn = new QPushButton(ReserveDates);
-        ProceedReservBttn->setObjectName(QString::fromUtf8("ProceedReservBttn"));
-        ProceedReservBttn->setGeometry(QRect(310, 330, 131, 41));
-        ProceedReservBttn->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"		height: 300px;\n"
-"  		width: 300px;\n"
-"  		border-radius:40%;\n"
-"		border-color: rgb(30, 39, 67);\n"
-"		color: rgb(255, 255, 255);\n"
-"		background-color: rgb(0, 0, 0);\n"
-"}\n"
-"\n"
-"\n"
-"\n"
-"QPushButton:hover\n"
-"{\n"
-"	\n"
-"	border-color: rgb(30, 39, 67);\n"
-"	\n"
-"	\n"
-"	background-color: rgb(25, 25, 25);\n"
-"	color:rgb(204, 204, 204)\n"
-"}"));
-        calendarWidget = new QCalendarWidget(ReserveDates);
-        calendarWidget->setObjectName(QString::fromUtf8("calendarWidget"));
-        calendarWidget->setGeometry(QRect(160, 120, 304, 173));
-        QPalette palette3;
-        palette3.setBrush(QPalette::Active, QPalette::Button, brush1);
-        palette3.setBrush(QPalette::Active, QPalette::Base, brush1);
-        palette3.setBrush(QPalette::Active, QPalette::Window, brush1);
-        palette3.setBrush(QPalette::Inactive, QPalette::Button, brush1);
-        palette3.setBrush(QPalette::Inactive, QPalette::Base, brush1);
-        palette3.setBrush(QPalette::Inactive, QPalette::Window, brush1);
-        palette3.setBrush(QPalette::Disabled, QPalette::Button, brush1);
-        palette3.setBrush(QPalette::Disabled, QPalette::Base, brush1);
-        palette3.setBrush(QPalette::Disabled, QPalette::Window, brush1);
-        calendarWidget->setPalette(palette3);
-        calendarWidget->setMinimumDate(QDate(2020, 1, 23));
-        calendarWidget->setHorizontalHeaderFormat(QCalendarWidget::ShortDayNames);
-        NumNights = new QSpinBox(ReserveDates);
-        NumNights->setObjectName(QString::fromUtf8("NumNights"));
-        NumNights->setGeometry(QRect(540, 180, 81, 111));
+        label_3 = new QLabel(ReserveDates);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(310, 40, 201, 51));
         QFont font4;
-        font4.setPointSize(40);
-        NumNights->setFont(font4);
-        NumNights->setAlignment(Qt::AlignCenter);
-        NumNights->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        NumNights->setMaximum(7);
+        font4.setPointSize(23);
+        label_3->setFont(font4);
+        ProceedDatesBttn = new QPushButton(ReserveDates);
+        ProceedDatesBttn->setObjectName(QString::fromUtf8("ProceedDatesBttn"));
+        ProceedDatesBttn->setGeometry(QRect(290, 350, 131, 41));
+        CalendarWidget = new QCalendarWidget(ReserveDates);
+        CalendarWidget->setObjectName(QString::fromUtf8("CalendarWidget"));
+        CalendarWidget->setGeometry(QRect(150, 150, 304, 173));
+        CalendarWidget->setMinimumDate(QDate(2020, 1, 23));
+        NumNightsBox = new QSpinBox(ReserveDates);
+        NumNightsBox->setObjectName(QString::fromUtf8("NumNightsBox"));
+        NumNightsBox->setGeometry(QRect(500, 200, 81, 121));
+        QFont font5;
+        font5.setPointSize(40);
+        NumNightsBox->setFont(font5);
+        NumNightsBox->setAlignment(Qt::AlignCenter);
+        NumNightsBox->setButtonSymbols(QAbstractSpinBox::PlusMinus);
+        NumNightsBox->setMaximum(7);
         label_6 = new QLabel(ReserveDates);
         label_6->setObjectName(QString::fromUtf8("label_6"));
-        label_6->setGeometry(QRect(540, 120, 81, 51));
+        label_6->setGeometry(QRect(500, 140, 81, 51));
         label_6->setWordWrap(true);
         line = new QFrame(ReserveDates);
         line->setObjectName(QString::fromUtf8("line"));
-        line->setGeometry(QRect(490, 120, 20, 171));
-        QPalette palette4;
-        palette4.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        palette4.setBrush(QPalette::Active, QPalette::Button, brush1);
-        palette4.setBrush(QPalette::Active, QPalette::Text, brush);
-        palette4.setBrush(QPalette::Active, QPalette::ButtonText, brush);
-        palette4.setBrush(QPalette::Active, QPalette::Base, brush1);
-        palette4.setBrush(QPalette::Active, QPalette::Window, brush1);
+        line->setGeometry(QRect(460, 150, 20, 171));
+        QPalette palette2;
+        palette2.setBrush(QPalette::Active, QPalette::WindowText, brush);
+        palette2.setBrush(QPalette::Active, QPalette::Button, brush1);
+        palette2.setBrush(QPalette::Active, QPalette::Text, brush);
+        palette2.setBrush(QPalette::Active, QPalette::ButtonText, brush);
+        palette2.setBrush(QPalette::Active, QPalette::Base, brush1);
+        palette2.setBrush(QPalette::Active, QPalette::Window, brush1);
         QBrush brush12(QColor(0, 0, 0, 128));
         brush12.setStyle(Qt::NoBrush);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette4.setBrush(QPalette::Active, QPalette::PlaceholderText, brush12);
+        palette2.setBrush(QPalette::Active, QPalette::PlaceholderText, brush12);
 #endif
-        palette4.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
-        palette4.setBrush(QPalette::Inactive, QPalette::Button, brush1);
-        palette4.setBrush(QPalette::Inactive, QPalette::Text, brush);
-        palette4.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
-        palette4.setBrush(QPalette::Inactive, QPalette::Base, brush1);
-        palette4.setBrush(QPalette::Inactive, QPalette::Window, brush1);
+        palette2.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::Button, brush1);
+        palette2.setBrush(QPalette::Inactive, QPalette::Text, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
+        palette2.setBrush(QPalette::Inactive, QPalette::Base, brush1);
+        palette2.setBrush(QPalette::Inactive, QPalette::Window, brush1);
         QBrush brush13(QColor(0, 0, 0, 128));
         brush13.setStyle(Qt::NoBrush);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette4.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush13);
+        palette2.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush13);
 #endif
-        palette4.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
-        palette4.setBrush(QPalette::Disabled, QPalette::Button, brush1);
-        palette4.setBrush(QPalette::Disabled, QPalette::Text, brush);
-        palette4.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
-        palette4.setBrush(QPalette::Disabled, QPalette::Base, brush1);
-        palette4.setBrush(QPalette::Disabled, QPalette::Window, brush1);
+        palette2.setBrush(QPalette::Disabled, QPalette::WindowText, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::Button, brush1);
+        palette2.setBrush(QPalette::Disabled, QPalette::Text, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::ButtonText, brush);
+        palette2.setBrush(QPalette::Disabled, QPalette::Base, brush1);
+        palette2.setBrush(QPalette::Disabled, QPalette::Window, brush1);
         QBrush brush14(QColor(0, 0, 0, 128));
         brush14.setStyle(Qt::NoBrush);
 #if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette4.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush14);
+        palette2.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush14);
 #endif
-        line->setPalette(palette4);
+        line->setPalette(palette2);
         line->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
         line->setFrameShape(QFrame::VLine);
         line->setFrameShadow(QFrame::Sunken);
-        frame_2 = new QFrame(ReserveDates);
-        frame_2->setObjectName(QString::fromUtf8("frame_2"));
-        frame_2->setGeometry(QRect(270, 20, 211, 51));
-        frame_2->setFrameShape(QFrame::StyledPanel);
-        frame_2->setFrameShadow(QFrame::Raised);
-        Header_2 = new QLabel(frame_2);
-        Header_2->setObjectName(QString::fromUtf8("Header_2"));
-        Header_2->setGeometry(QRect(30, 10, 161, 31));
-        Header_2->setFont(font2);
         stackedWidget->addWidget(ReserveDates);
         NumberOfGuests = new QWidget();
         NumberOfGuests->setObjectName(QString::fromUtf8("NumberOfGuests"));
+        Header = new QLabel(NumberOfGuests);
+        Header->setObjectName(QString::fromUtf8("Header"));
+        Header->setGeometry(QRect(270, 60, 171, 31));
+        QFont font6;
+        font6.setPointSize(20);
+        Header->setFont(font6);
+        NumAdultsBox = new QSpinBox(NumberOfGuests);
+        NumAdultsBox->setObjectName(QString::fromUtf8("NumAdultsBox"));
+        NumAdultsBox->setGeometry(QRect(230, 140, 41, 31));
         AdultLabel = new QLabel(NumberOfGuests);
         AdultLabel->setObjectName(QString::fromUtf8("AdultLabel"));
-        AdultLabel->setGeometry(QRect(160, 130, 181, 21));
-        QFont font5;
-        font5.setPointSize(16);
-        AdultLabel->setFont(font5);
+        AdultLabel->setGeometry(QRect(180, 110, 151, 21));
+        NumKidsBox = new QSpinBox(NumberOfGuests);
+        NumKidsBox->setObjectName(QString::fromUtf8("NumKidsBox"));
+        NumKidsBox->setGeometry(QRect(420, 140, 41, 31));
         childrenLabel = new QLabel(NumberOfGuests);
         childrenLabel->setObjectName(QString::fromUtf8("childrenLabel"));
-        childrenLabel->setGeometry(QRect(410, 130, 151, 21));
-        childrenLabel->setFont(font5);
-        frame = new QFrame(NumberOfGuests);
-        frame->setObjectName(QString::fromUtf8("frame"));
-        frame->setGeometry(QRect(280, 30, 201, 51));
-        frame->setFrameShape(QFrame::StyledPanel);
-        frame->setFrameShadow(QFrame::Raised);
-        Header = new QLabel(frame);
-        Header->setObjectName(QString::fromUtf8("Header"));
-        Header->setGeometry(QRect(20, 10, 161, 31));
-        Header->setFont(font2);
-        line_3 = new QFrame(NumberOfGuests);
-        line_3->setObjectName(QString::fromUtf8("line_3"));
-        line_3->setGeometry(QRect(360, 120, 20, 141));
-        line_3->setFrameShape(QFrame::VLine);
-        line_3->setFrameShadow(QFrame::Sunken);
+        childrenLabel->setGeometry(QRect(370, 110, 151, 21));
+        ProceedGuests = new QPushButton(NumberOfGuests);
+        ProceedGuests->setObjectName(QString::fromUtf8("ProceedGuests"));
+        ProceedGuests->setGeometry(QRect(280, 290, 131, 41));
         ParkingCheckBox = new QCheckBox(NumberOfGuests);
         ParkingCheckBox->setObjectName(QString::fromUtf8("ParkingCheckBox"));
-        ParkingCheckBox->setGeometry(QRect(310, 280, 131, 20));
-        NumAdultsSpnBx = new QSpinBox(NumberOfGuests);
-        NumAdultsSpnBx->setObjectName(QString::fromUtf8("NumAdultsSpnBx"));
-        NumAdultsSpnBx->setGeometry(QRect(220, 170, 51, 71));
-        NumChildrenSpnBx = new QSpinBox(NumberOfGuests);
-        NumChildrenSpnBx->setObjectName(QString::fromUtf8("NumChildrenSpnBx"));
-        NumChildrenSpnBx->setGeometry(QRect(460, 170, 51, 71));
-        ProceedBttn = new QPushButton(NumberOfGuests);
-        ProceedBttn->setObjectName(QString::fromUtf8("ProceedBttn"));
-        ProceedBttn->setGeometry(QRect(310, 350, 121, 51));
-        ProceedBttn->setStyleSheet(QString::fromUtf8("QPushButton\n"
-"{\n"
-"		height: 300px;\n"
-"  		width: 300px;\n"
-"  		border-radius:40%;\n"
-"		border-color: rgb(30, 39, 67);\n"
-"		color: rgb(255, 255, 255);\n"
-"		background-color: rgb(0, 0, 0);\n"
-"}\n"
-"\n"
-"\n"
-"\n"
-"QPushButton:hover\n"
-"{\n"
-"	\n"
-"	border-color: rgb(30, 39, 67);\n"
-"	\n"
-"	\n"
-"	background-color: rgb(25, 25, 25);\n"
-"	color:rgb(204, 204, 204)\n"
-"}"));
+        ParkingCheckBox->setGeometry(QRect(270, 230, 86, 20));
         stackedWidget->addWidget(NumberOfGuests);
         TotalCharge = new QWidget();
         TotalCharge->setObjectName(QString::fromUtf8("TotalCharge"));
-        label_7 = new QLabel(TotalCharge);
-        label_7->setObjectName(QString::fromUtf8("label_7"));
-        label_7->setGeometry(QRect(350, 20, 151, 61));
-        QFont font6;
-        font6.setFamily(QString::fromUtf8("Baskerville"));
-        font6.setPointSize(23);
-        label_7->setFont(font6);
-        frame_3 = new QFrame(TotalCharge);
-        frame_3->setObjectName(QString::fromUtf8("frame_3"));
-        frame_3->setGeometry(QRect(220, 70, 391, 161));
-        frame_3->setFrameShape(QFrame::StyledPanel);
-        frame_3->setFrameShadow(QFrame::Raised);
-        label_5 = new QLabel(frame_3);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setGeometry(QRect(10, 40, 16, 16));
-        label_9 = new QLabel(frame_3);
-        label_9->setObjectName(QString::fromUtf8("label_9"));
-        label_9->setGeometry(QRect(10, 90, 16, 16));
-        RoomChargeAmnt = new QLabel(frame_3);
-        RoomChargeAmnt->setObjectName(QString::fromUtf8("RoomChargeAmnt"));
-        RoomChargeAmnt->setGeometry(QRect(298, 20, 51, 20));
-        ParkingFeeAmnt = new QLabel(frame_3);
-        ParkingFeeAmnt->setObjectName(QString::fromUtf8("ParkingFeeAmnt"));
-        ParkingFeeAmnt->setGeometry(QRect(300, 70, 41, 20));
-        ResortFeeAmnt = new QLabel(frame_3);
-        ResortFeeAmnt->setObjectName(QString::fromUtf8("ResortFeeAmnt"));
-        ResortFeeAmnt->setGeometry(QRect(300, 120, 41, 20));
-        label = new QLabel(frame_3);
-        label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(60, 20, 111, 16));
-        label->setFont(font5);
-        label_13 = new QLabel(frame_3);
-        label_13->setObjectName(QString::fromUtf8("label_13"));
-        label_13->setGeometry(QRect(60, 70, 91, 16));
-        label_13->setFont(font5);
-        label_14 = new QLabel(frame_3);
-        label_14->setObjectName(QString::fromUtf8("label_14"));
-        label_14->setGeometry(QRect(60, 120, 91, 16));
-        label_14->setFont(font5);
-        frame_8 = new QFrame(TotalCharge);
-        frame_8->setObjectName(QString::fromUtf8("frame_8"));
-        frame_8->setGeometry(QRect(220, 240, 391, 111));
-        frame_8->setFrameShape(QFrame::StyledPanel);
-        frame_8->setFrameShadow(QFrame::Raised);
-        Total_2 = new QLabel(frame_8);
-        Total_2->setObjectName(QString::fromUtf8("Total_2"));
-        Total_2->setGeometry(QRect(50, 80, 59, 16));
-        QFont font7;
-        font7.setPointSize(16);
-        font7.setBold(true);
-        font7.setWeight(75);
-        Total_2->setFont(font7);
-        label_11 = new QLabel(frame_8);
-        label_11->setObjectName(QString::fromUtf8("label_11"));
-        label_11->setGeometry(QRect(50, 50, 59, 16));
-        label_12 = new QLabel(frame_8);
-        label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setGeometry(QRect(50, 20, 59, 16));
-        QFont font8;
-        font8.setBold(false);
-        font8.setWeight(50);
-        label_12->setFont(font8);
-        SubtotalAmntReview = new QLabel(frame_8);
-        SubtotalAmntReview->setObjectName(QString::fromUtf8("SubtotalAmntReview"));
-        SubtotalAmntReview->setGeometry(QRect(280, 20, 59, 16));
-        TaxAmntReview = new QLabel(frame_8);
-        TaxAmntReview->setObjectName(QString::fromUtf8("TaxAmntReview"));
-        TaxAmntReview->setGeometry(QRect(280, 50, 59, 16));
-        TotalAmntReview = new QLabel(frame_8);
-        TotalAmntReview->setObjectName(QString::fromUtf8("TotalAmntReview"));
-        TotalAmntReview->setGeometry(QRect(280, 80, 59, 16));
+        TotalChargesHeader = new QLabel(TotalCharge);
+        TotalChargesHeader->setObjectName(QString::fromUtf8("TotalChargesHeader"));
+        TotalChargesHeader->setGeometry(QRect(290, 50, 151, 61));
+        TotalChargesHeader->setFont(font4);
+        ProceedCharges = new QPushButton(TotalCharge);
+        ProceedCharges->setObjectName(QString::fromUtf8("ProceedCharges"));
+        ProceedCharges->setGeometry(QRect(330, 260, 75, 23));
+        RoomTypeEdit = new QLabel(TotalCharge);
+        RoomTypeEdit->setObjectName(QString::fromUtf8("RoomTypeEdit"));
+        RoomTypeEdit->setGeometry(QRect(420, 120, 59, 16));
+        BedTypeLabel = new QLabel(TotalCharge);
+        BedTypeLabel->setObjectName(QString::fromUtf8("BedTypeLabel"));
+        BedTypeLabel->setGeometry(QRect(250, 150, 71, 16));
+        BedTypeEdit = new QLabel(TotalCharge);
+        BedTypeEdit->setObjectName(QString::fromUtf8("BedTypeEdit"));
+        BedTypeEdit->setGeometry(QRect(420, 150, 59, 16));
+        ParkingTypeLabel = new QLabel(TotalCharge);
+        ParkingTypeLabel->setObjectName(QString::fromUtf8("ParkingTypeLabel"));
+        ParkingTypeLabel->setGeometry(QRect(250, 180, 59, 16));
+        RoomType = new QLabel(TotalCharge);
+        RoomType->setObjectName(QString::fromUtf8("RoomType"));
+        RoomType->setGeometry(QRect(250, 120, 81, 16));
+        ParkingTypeEdit = new QLabel(TotalCharge);
+        ParkingTypeEdit->setObjectName(QString::fromUtf8("ParkingTypeEdit"));
+        ParkingTypeEdit->setGeometry(QRect(420, 180, 59, 16));
         stackedWidget->addWidget(TotalCharge);
         PaymentInfo = new QWidget();
         PaymentInfo->setObjectName(QString::fromUtf8("PaymentInfo"));
-        VisaButton = new QRadioButton(PaymentInfo);
-        VisaButton->setObjectName(QString::fromUtf8("VisaButton"));
-        VisaButton->setGeometry(QRect(170, 110, 100, 20));
-        MasterCardButton = new QRadioButton(PaymentInfo);
-        MasterCardButton->setObjectName(QString::fromUtf8("MasterCardButton"));
-        MasterCardButton->setGeometry(QRect(170, 130, 100, 20));
-        DiscoverButton = new QRadioButton(PaymentInfo);
-        DiscoverButton->setObjectName(QString::fromUtf8("DiscoverButton"));
-        DiscoverButton->setGeometry(QRect(170, 150, 100, 20));
-        AmericanExpressButton = new QRadioButton(PaymentInfo);
-        AmericanExpressButton->setObjectName(QString::fromUtf8("AmericanExpressButton"));
-        AmericanExpressButton->setGeometry(QRect(170, 170, 131, 20));
+        VisaRadio = new QRadioButton(PaymentInfo);
+        VisaRadio->setObjectName(QString::fromUtf8("VisaRadio"));
+        VisaRadio->setGeometry(QRect(170, 110, 100, 20));
+        MasterRadio = new QRadioButton(PaymentInfo);
+        MasterRadio->setObjectName(QString::fromUtf8("MasterRadio"));
+        MasterRadio->setGeometry(QRect(170, 130, 100, 20));
+        DiscoRadio = new QRadioButton(PaymentInfo);
+        DiscoRadio->setObjectName(QString::fromUtf8("DiscoRadio"));
+        DiscoRadio->setGeometry(QRect(170, 150, 100, 20));
+        AmericanRadio = new QRadioButton(PaymentInfo);
+        AmericanRadio->setObjectName(QString::fromUtf8("AmericanRadio"));
+        AmericanRadio->setGeometry(QRect(170, 170, 131, 20));
         PayNowButton = new QPushButton(PaymentInfo);
         PayNowButton->setObjectName(QString::fromUtf8("PayNowButton"));
-        PayNowButton->setGeometry(QRect(330, 240, 113, 41));
+        PayNowButton->setGeometry(QRect(310, 350, 113, 41));
         label_8 = new QLabel(PaymentInfo);
         label_8->setObjectName(QString::fromUtf8("label_8"));
-        label_8->setGeometry(QRect(330, 50, 91, 41));
-        QFont font9;
-        font9.setPointSize(18);
-        label_8->setFont(font9);
-        CardEntryLine = new QLineEdit(PaymentInfo);
-        CardEntryLine->setObjectName(QString::fromUtf8("CardEntryLine"));
-        CardEntryLine->setEnabled(true);
-        CardEntryLine->setGeometry(QRect(310, 210, 113, 21));
-        QFont font10;
-        font10.setPointSize(13);
-        CardEntryLine->setFont(font10);
-        CardEntryLine->setAutoFillBackground(false);
-        CardEntryLine->setFrame(false);
+        label_8->setGeometry(QRect(330, 50, 131, 41));
+        QFont font7;
+        font7.setPointSize(18);
+        label_8->setFont(font7);
+        CreditInfo = new QLineEdit(PaymentInfo);
+        CreditInfo->setObjectName(QString::fromUtf8("CreditInfo"));
+        CreditInfo->setGeometry(QRect(300, 240, 161, 31));
         stackedWidget->addWidget(PaymentInfo);
         ReservatinDetails = new QWidget();
         ReservatinDetails->setObjectName(QString::fromUtf8("ReservatinDetails"));
+        TitleLabel = new QLabel(ReservatinDetails);
+        TitleLabel->setObjectName(QString::fromUtf8("TitleLabel"));
+        TitleLabel->setGeometry(QRect(270, 30, 190, 40));
+        TitleLabel->setFont(font6);
+        FirstLabel = new QLabel(ReservatinDetails);
+        FirstLabel->setObjectName(QString::fromUtf8("FirstLabel"));
+        FirstLabel->setGeometry(QRect(90, 120, 99, 30));
         NumNightsLabel = new QLabel(ReservatinDetails);
         NumNightsLabel->setObjectName(QString::fromUtf8("NumNightsLabel"));
-        NumNightsLabel->setGeometry(QRect(150, 120, 59, 16));
+        NumNightsLabel->setGeometry(QRect(90, 150, 100, 30));
+        RoomLabel = new QLabel(ReservatinDetails);
+        RoomLabel->setObjectName(QString::fromUtf8("RoomLabel"));
+        RoomLabel->setGeometry(QRect(90, 210, 101, 30));
         ParkingLabel = new QLabel(ReservatinDetails);
         ParkingLabel->setObjectName(QString::fromUtf8("ParkingLabel"));
-        ParkingLabel->setGeometry(QRect(150, 200, 59, 16));
-        StartDate = new QLabel(ReservatinDetails);
-        StartDate->setObjectName(QString::fromUtf8("StartDate"));
-        StartDate->setGeometry(QRect(240, 80, 71, 16));
-        RoomTypeLabel = new QLabel(ReservatinDetails);
-        RoomTypeLabel->setObjectName(QString::fromUtf8("RoomTypeLabel"));
-        RoomTypeLabel->setGeometry(QRect(150, 160, 81, 16));
+        ParkingLabel->setGeometry(QRect(90, 180, 100, 30));
         NumAdultsLabel = new QLabel(ReservatinDetails);
         NumAdultsLabel->setObjectName(QString::fromUtf8("NumAdultsLabel"));
-        NumAdultsLabel->setGeometry(QRect(150, 140, 59, 16));
-        TotalAmountLabel = new QLabel(ReservatinDetails);
-        TotalAmountLabel->setObjectName(QString::fromUtf8("TotalAmountLabel"));
-        TotalAmountLabel->setGeometry(QRect(150, 180, 91, 16));
-        label_21 = new QLabel(ReservatinDetails);
-        label_21->setObjectName(QString::fromUtf8("label_21"));
-        label_21->setGeometry(QRect(150, 220, 71, 16));
-        label_15 = new QLabel(ReservatinDetails);
-        label_15->setObjectName(QString::fromUtf8("label_15"));
-        label_15->setGeometry(QRect(270, 120, 59, 16));
-        label_16 = new QLabel(ReservatinDetails);
-        label_16->setObjectName(QString::fromUtf8("label_16"));
-        label_16->setGeometry(QRect(270, 140, 59, 16));
-        label_17 = new QLabel(ReservatinDetails);
-        label_17->setObjectName(QString::fromUtf8("label_17"));
-        label_17->setGeometry(QRect(270, 160, 59, 16));
-        label_18 = new QLabel(ReservatinDetails);
-        label_18->setObjectName(QString::fromUtf8("label_18"));
-        label_18->setGeometry(QRect(270, 180, 59, 16));
-        label_19 = new QLabel(ReservatinDetails);
-        label_19->setObjectName(QString::fromUtf8("label_19"));
-        label_19->setGeometry(QRect(270, 200, 59, 16));
-        label_20 = new QLabel(ReservatinDetails);
-        label_20->setObjectName(QString::fromUtf8("label_20"));
-        label_20->setGeometry(QRect(270, 220, 59, 16));
-        DetailFrame = new QFrame(ReservatinDetails);
-        DetailFrame->setObjectName(QString::fromUtf8("DetailFrame"));
-        DetailFrame->setGeometry(QRect(150, 260, 391, 111));
-        DetailFrame->setFrameShape(QFrame::StyledPanel);
-        DetailFrame->setFrameShadow(QFrame::Raised);
-        Total = new QLabel(DetailFrame);
-        Total->setObjectName(QString::fromUtf8("Total"));
-        Total->setGeometry(QRect(50, 80, 59, 16));
-        Total->setFont(font7);
-        Tax = new QLabel(DetailFrame);
-        Tax->setObjectName(QString::fromUtf8("Tax"));
-        Tax->setGeometry(QRect(50, 50, 59, 16));
-        Subtotal_2 = new QLabel(DetailFrame);
-        Subtotal_2->setObjectName(QString::fromUtf8("Subtotal_2"));
-        Subtotal_2->setGeometry(QRect(50, 20, 59, 16));
-        Subtotal_2->setFont(font8);
-        SubtotalAmnt = new QLabel(DetailFrame);
-        SubtotalAmnt->setObjectName(QString::fromUtf8("SubtotalAmnt"));
-        SubtotalAmnt->setGeometry(QRect(280, 20, 59, 16));
-        TaxAmnt = new QLabel(DetailFrame);
-        TaxAmnt->setObjectName(QString::fromUtf8("TaxAmnt"));
-        TaxAmnt->setGeometry(QRect(280, 50, 59, 16));
-        TotalAmnt = new QLabel(DetailFrame);
-        TotalAmnt->setObjectName(QString::fromUtf8("TotalAmnt"));
-        TotalAmnt->setGeometry(QRect(280, 80, 59, 16));
+        NumAdultsLabel->setGeometry(QRect(90, 240, 101, 30));
+        CreditLabel = new QLabel(ReservatinDetails);
+        CreditLabel->setObjectName(QString::fromUtf8("CreditLabel"));
+        CreditLabel->setGeometry(QRect(90, 310, 80, 30));
+        NumKidsLabel = new QLabel(ReservatinDetails);
+        NumKidsLabel->setObjectName(QString::fromUtf8("NumKidsLabel"));
+        NumKidsLabel->setGeometry(QRect(90, 270, 101, 30));
+        TotalLabel = new QLabel(ReservatinDetails);
+        TotalLabel->setObjectName(QString::fromUtf8("TotalLabel"));
+        TotalLabel->setGeometry(QRect(90, 340, 90, 30));
+        RezNameLabel = new QLabel(ReservatinDetails);
+        RezNameLabel->setObjectName(QString::fromUtf8("RezNameLabel"));
+        RezNameLabel->setGeometry(QRect(90, 90, 101, 30));
+        ResOutput = new QLabel(ReservatinDetails);
+        ResOutput->setObjectName(QString::fromUtf8("ResOutput"));
+        ResOutput->setGeometry(QRect(230, 90, 350, 30));
+        NumNightsOutput = new QLabel(ReservatinDetails);
+        NumNightsOutput->setObjectName(QString::fromUtf8("NumNightsOutput"));
+        NumNightsOutput->setGeometry(QRect(230, 150, 350, 30));
+        NumAdultOutput = new QLabel(ReservatinDetails);
+        NumAdultOutput->setObjectName(QString::fromUtf8("NumAdultOutput"));
+        NumAdultOutput->setGeometry(QRect(230, 240, 350, 30));
+        FirstOutput = new QLabel(ReservatinDetails);
+        FirstOutput->setObjectName(QString::fromUtf8("FirstOutput"));
+        FirstOutput->setGeometry(QRect(230, 120, 350, 30));
+        ParkOutput = new QLabel(ReservatinDetails);
+        ParkOutput->setObjectName(QString::fromUtf8("ParkOutput"));
+        ParkOutput->setGeometry(QRect(230, 180, 350, 30));
+        RoomOutput = new QLabel(ReservatinDetails);
+        RoomOutput->setObjectName(QString::fromUtf8("RoomOutput"));
+        RoomOutput->setGeometry(QRect(230, 210, 350, 30));
+        NumKidsOutput = new QLabel(ReservatinDetails);
+        NumKidsOutput->setObjectName(QString::fromUtf8("NumKidsOutput"));
+        NumKidsOutput->setGeometry(QRect(230, 270, 350, 30));
+        CreditOutput = new QLabel(ReservatinDetails);
+        CreditOutput->setObjectName(QString::fromUtf8("CreditOutput"));
+        CreditOutput->setGeometry(QRect(230, 310, 350, 30));
+        TotalOutput = new QLabel(ReservatinDetails);
+        TotalOutput->setObjectName(QString::fromUtf8("TotalOutput"));
+        TotalOutput->setGeometry(QRect(230, 340, 350, 30));
+        ConfirmButton = new QPushButton(ReservatinDetails);
+        ConfirmButton->setObjectName(QString::fromUtf8("ConfirmButton"));
+        ConfirmButton->setGeometry(QRect(300, 400, 113, 32));
         stackedWidget->addWidget(ReservatinDetails);
         FinalThanks = new QWidget();
         FinalThanks->setObjectName(QString::fromUtf8("FinalThanks"));
-        THankYouPag = new QLabel(FinalThanks);
-        THankYouPag->setObjectName(QString::fromUtf8("THankYouPag"));
-        THankYouPag->setGeometry(QRect(340, 50, 181, 81));
+        EndAllButton = new QPushButton(FinalThanks);
+        EndAllButton->setObjectName(QString::fromUtf8("EndAllButton"));
+        EndAllButton->setGeometry(QRect(160, 270, 131, 32));
         stackedWidget->addWidget(FinalThanks);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 22));
+        menubar->setGeometry(QRect(0, 0, 800, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -786,7 +558,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(6);
+        stackedWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -795,64 +567,60 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
-        WelcomeButton->setText(QApplication::translate("MainWindow", "- Reserve Stay -", nullptr));
-        LogoLabel->setText(QApplication::translate("MainWindow", "<html><head/><body><p><img src=\":/Desktop/Logo3.png\"/></p></body></html>", nullptr));
+        label->setText(QApplication::translate("MainWindow", "Welcome to KLZ Hotels!", nullptr));
+        WelcomeButton->setText(QApplication::translate("MainWindow", "Reserve a Room", nullptr));
+        label_2->setText(QApplication::translate("MainWindow", "      Logo", nullptr));
+        label_10->setText(QApplication::translate("MainWindow", "Reservation name:", nullptr));
+        label_5->setText(QApplication::translate("MainWindow", "Bed & Room Selection", nullptr));
         KingButton->setText(QApplication::translate("MainWindow", "King ", nullptr));
         QueenButton->setText(QApplication::translate("MainWindow", "2 Queens", nullptr));
-        HeaderText->setText(QApplication::translate("MainWindow", "Choose your bed type", nullptr));
+        RoomTypeLabel->setText(QApplication::translate("MainWindow", "Room Type", nullptr));
         AtriumButton->setText(QApplication::translate("MainWindow", "Atrium", nullptr));
         StandardButton->setText(QApplication::translate("MainWindow", "Standard", nullptr));
-        Header_7->setText(QApplication::translate("MainWindow", "Choose your room type", nullptr));
-        ProceedReservBttn->setText(QApplication::translate("MainWindow", "Proceed ", nullptr));
+        label_3->setText(QApplication::translate("MainWindow", "Reserve Dates", nullptr));
+        ProceedDatesBttn->setText(QApplication::translate("MainWindow", "Proceed ", nullptr));
         label_6->setText(QApplication::translate("MainWindow", "How many nights will you stay?", nullptr));
-        Header_2->setText(QApplication::translate("MainWindow", "Reservation Dates", nullptr));
-        AdultLabel->setText(QApplication::translate("MainWindow", "How Many Adults(18+)?", nullptr));
+        Header->setText(QApplication::translate("MainWindow", "How Many Guests", nullptr));
+        AdultLabel->setText(QApplication::translate("MainWindow", "How Many Adults(18+)", nullptr));
         childrenLabel->setText(QApplication::translate("MainWindow", "How Many Children?", nullptr));
-        Header->setText(QApplication::translate("MainWindow", "Reservation Details", nullptr));
-        ParkingCheckBox->setText(QApplication::translate("MainWindow", "Parking (12.75)?", nullptr));
-        ProceedBttn->setText(QApplication::translate("MainWindow", "Proceed ", nullptr));
-        label_7->setText(QApplication::translate("MainWindow", "Total Charges", nullptr));
-        label_5->setText(QApplication::translate("MainWindow", "+", nullptr));
-        label_9->setText(QApplication::translate("MainWindow", "+", nullptr));
-        RoomChargeAmnt->setText(QApplication::translate("MainWindow", "50.00", nullptr));
-        ParkingFeeAmnt->setText(QApplication::translate("MainWindow", "12.49", nullptr));
-        ResortFeeAmnt->setText(QApplication::translate("MainWindow", "15.00", nullptr));
-        label->setText(QApplication::translate("MainWindow", "Room Charge", nullptr));
-        label_13->setText(QApplication::translate("MainWindow", "Parking Fee", nullptr));
-        label_14->setText(QApplication::translate("MainWindow", "Resort Fee", nullptr));
-        Total_2->setText(QApplication::translate("MainWindow", "TOTAL", nullptr));
-        label_11->setText(QApplication::translate("MainWindow", "Tax", nullptr));
-        label_12->setText(QApplication::translate("MainWindow", "Subtotal", nullptr));
-        SubtotalAmntReview->setText(QApplication::translate("MainWindow", "69.99", nullptr));
-        TaxAmntReview->setText(QApplication::translate("MainWindow", "6.99", nullptr));
-        TotalAmntReview->setText(QApplication::translate("MainWindow", "78.99", nullptr));
-        VisaButton->setText(QApplication::translate("MainWindow", "Visa", nullptr));
-        MasterCardButton->setText(QApplication::translate("MainWindow", "MasterCard", nullptr));
-        DiscoverButton->setText(QApplication::translate("MainWindow", "Discover", nullptr));
-        AmericanExpressButton->setText(QApplication::translate("MainWindow", "American Express", nullptr));
+        ProceedGuests->setText(QApplication::translate("MainWindow", "Proceed ", nullptr));
+        ParkingCheckBox->setText(QApplication::translate("MainWindow", "Parking?", nullptr));
+        TotalChargesHeader->setText(QApplication::translate("MainWindow", "Total Charges", nullptr));
+        ProceedCharges->setText(QApplication::translate("MainWindow", "Proceed", nullptr));
+        RoomTypeEdit->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
+        BedTypeLabel->setText(QApplication::translate("MainWindow", "Bed Type", nullptr));
+        BedTypeEdit->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
+        ParkingTypeLabel->setText(QApplication::translate("MainWindow", "Parking", nullptr));
+        RoomType->setText(QApplication::translate("MainWindow", "Room Type", nullptr));
+        ParkingTypeEdit->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
+        VisaRadio->setText(QApplication::translate("MainWindow", "Visa", nullptr));
+        MasterRadio->setText(QApplication::translate("MainWindow", "MasterCard", nullptr));
+        DiscoRadio->setText(QApplication::translate("MainWindow", "Discover", nullptr));
+        AmericanRadio->setText(QApplication::translate("MainWindow", "American Express", nullptr));
         PayNowButton->setText(QApplication::translate("MainWindow", "Pay Now", nullptr));
         label_8->setText(QApplication::translate("MainWindow", "Check  Out", nullptr));
-        CardEntryLine->setInputMask(QApplication::translate("MainWindow", "9999-9999-9999;_", nullptr));
-        NumNightsLabel->setText(QApplication::translate("MainWindow", "Nights: ", nullptr));
+        CreditInfo->setInputMask(QString());
+        TitleLabel->setText(QApplication::translate("MainWindow", "Confirmation ", nullptr));
+        FirstLabel->setText(QApplication::translate("MainWindow", "First Day:", nullptr));
+        NumNightsLabel->setText(QApplication::translate("MainWindow", "How many nights:", nullptr));
+        RoomLabel->setText(QApplication::translate("MainWindow", "Room type:", nullptr));
         ParkingLabel->setText(QApplication::translate("MainWindow", "Parking:", nullptr));
-        StartDate->setText(QApplication::translate("MainWindow", "Start Date:", nullptr));
-        RoomTypeLabel->setText(QApplication::translate("MainWindow", "Room Type:", nullptr));
-        NumAdultsLabel->setText(QApplication::translate("MainWindow", "Adults:", nullptr));
-        TotalAmountLabel->setText(QApplication::translate("MainWindow", "Total Amount", nullptr));
-        label_21->setText(QApplication::translate("MainWindow", "Resort Fee", nullptr));
-        label_15->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_16->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_17->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_18->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_19->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        label_20->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        Total->setText(QApplication::translate("MainWindow", "TOTAL", nullptr));
-        Tax->setText(QApplication::translate("MainWindow", "Tax", nullptr));
-        Subtotal_2->setText(QApplication::translate("MainWindow", "Subtotal", nullptr));
-        SubtotalAmnt->setText(QApplication::translate("MainWindow", "69.99", nullptr));
-        TaxAmnt->setText(QApplication::translate("MainWindow", "6.99", nullptr));
-        TotalAmnt->setText(QApplication::translate("MainWindow", "78.99", nullptr));
-        THankYouPag->setText(QApplication::translate("MainWindow", "Thank You Page ", nullptr));
+        NumAdultsLabel->setText(QApplication::translate("MainWindow", "Number of adults:", nullptr));
+        CreditLabel->setText(QApplication::translate("MainWindow", "Paid with:", nullptr));
+        NumKidsLabel->setText(QApplication::translate("MainWindow", "Number of kids", nullptr));
+        TotalLabel->setText(QApplication::translate("MainWindow", "Total:", nullptr));
+        RezNameLabel->setText(QApplication::translate("MainWindow", "Reservation name:", nullptr));
+        ResOutput->setText(QApplication::translate("MainWindow", "e", nullptr));
+        NumNightsOutput->setText(QApplication::translate("MainWindow", "w", nullptr));
+        NumAdultOutput->setText(QApplication::translate("MainWindow", "r", nullptr));
+        FirstOutput->setText(QApplication::translate("MainWindow", "c", nullptr));
+        ParkOutput->setText(QApplication::translate("MainWindow", "d", nullptr));
+        RoomOutput->setText(QApplication::translate("MainWindow", "a", nullptr));
+        NumKidsOutput->setText(QApplication::translate("MainWindow", "r", nullptr));
+        CreditOutput->setText(QApplication::translate("MainWindow", "r", nullptr));
+        TotalOutput->setText(QApplication::translate("MainWindow", "r", nullptr));
+        ConfirmButton->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        EndAllButton->setText(QApplication::translate("MainWindow", "Reserve a Room", nullptr));
     } // retranslateUi
 
 };

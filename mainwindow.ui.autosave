@@ -469,7 +469,7 @@
      <string notr="true">background-color: rgb(198, 218, 248);</string>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>8</number>
     </property>
     <widget class="QWidget" name="page"/>
     <widget class="QWidget" name="WelcomePage">

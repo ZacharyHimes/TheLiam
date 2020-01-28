@@ -9,37 +9,19 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-
-    connect(ui->KingButton,SIGNAL(clicked()),this,SLOT(KingButtonClicked()));
-    connect(ui->QueenButton,SIGNAL(clicked()),this,SLOT(AtriumButtonClicked()));
-
-
-    //do not know why this is not working. Exactly as Dr. Park did and what I found online
-
-
-
-    //how to output everything
-    //ui->FirstOutput->setText();
-    //ui->NumNightsOutput->setText();
-    //ui->ParkOutput->setText();
-    //ui->RoomOutput->setText();
-    //ui->NumAdultOutput->setText();
-    //ui->NumKidOutput->setText();
-    //ui->CreditOutput->setText(CreditCardNumber);
-    //ui->TotalOutput->setText();
+    static const char ENV_VAR_QT_DEVICE_PIXEL_RATIO[] = "QT_DEVICE_PIXEL_RATIO";
+    if (!qEnvironmentVariableIsSet(ENV_VAR_QT_DEVICE_PIXEL_RATIO)
+            && !qEnvironmentVariableIsSet("QT_AUTO_SCREEN_SCALE_FACTOR")
+            && !qEnvironmentVariableIsSet("QT_SCALE_FACTOR")
+            && !qEnvironmentVariableIsSet("QT_SCREEN_SCALE_FACTORS")) {
+        QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    }
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-
-
 }
-
-
-
-
 
 void MainWindow::on_WelcomeButton_clicked()
 {
@@ -61,11 +43,11 @@ void MainWindow::on_QueenButton_clicked()
 
 
 
-float MainWindow::calculateTotalCost()
+double MainWindow::calculateTotalCost()
 {
     float totalCost = -1;
-
-    totalCost = calculateRoomCost() * nightsStaying;
+    calculateRoomCost();
+    totalCost =  reservationRoom.CostPerNight * nightsStaying;
 
     if(parking)
         totalCost += (12.75 * nightsStaying);
@@ -73,7 +55,7 @@ float MainWindow::calculateTotalCost()
     return totalCost;
 }
 
-float MainWindow::calculateRoomCost()
+void MainWindow::calculateRoomCost()
 {
     if(reservationRoom.RoomType == "Atrium" && reservationRoom.BedType == "King")
         reservationRoom.CostPerNight = 350;
@@ -146,24 +128,58 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_DiscoRadio_clicked()
 {
-    ui->CardEntryLine->setInputMask("");
-    ui->CardEntryLine->setInputMask("6999-9999-9999-9999;#");
+    ui->CreditInfo->setInputMask("");
+    ui->CreditInfo->setInputMask("6999-9999-9999-9999;#");
 }
 
 void MainWindow::on_VisaRadio_clicked()
 {
-    ui->CardEntryLine->setInputMask("");
-    ui->CardEntryLine->setInputMask("4999-9999-9999-9999;#");
+    ui->CreditInfo->setInputMask("");
+    ui->CreditInfo->setInputMask("4999-9999-9999-9999;#");
 }
 
 void MainWindow::on_MasterRadio_clicked()
 {
-    ui->CardEntryLine->setInputMask("");
-    ui->CardEntryLine->setInputMask("5999-9999-9999-9999;#");
+    ui->CreditInfo->setInputMask("");
+    ui->CreditInfo->setInputMask("5999-9999-9999-9999;#");
 }
 
 void MainWindow::on_AmericanRadio_clicked()
 {
-    ui->CardEntryLine->setInputMask("");
-    ui->CardEntryLine->setInputMask("3999-999999-99999;#");
+    ui->CreditInfo->setInputMask("");
+    ui->CreditInfo->setInputMask("3999-999999-99999;#");
+}
+
+void MainWindow::on_ProceedGuests_clicked()
+{
+    adultsStaying = ui->NumAdultsBox->value();
+    kidsStaying = ui->NumKidsBox->value();
+    parking = ui->ParkingCheckBox->checkState();
+
+    //Generate Cost for total cost page
+    ui->RoomTypeLabel->setText(reservationRoom.RoomType);
+    ui->RoomTypeLabel->setText(reservationRoom.BedType);
+    ui->ParkingTypeEdit->setText(QString (parking));
+}
+
+void MainWindow::on_ProceedDatesBttn_clicked()
+{
+    reservationStartDate = ui->CalendarWidget->selectedDate();
+    nightsStaying = ui->NumNightsBox->value();
+}
+
+void MainWindow::on_PayNowButton_clicked()
+{
+
+    CreditCardNumber = ui->CreditInfo->text();
+
+    ui->ResOutput->setText("Reservation Name Goes Here");
+    ui->FirstOutput->setText(reservationStartDate.toString());
+    ui->ParkOutput->setText(QString (parking));
+    ui->ResOutput->setText(reservationRoom.RoomType + " " + reservationRoom.BedType);
+    ui->NumAdultOutput->setText(QString (adultsStaying));
+    ui->NumKidsOutput->setText(QString (kidsStaying));
+    QStringRef lastFour(&CreditCardNumber,CreditCardNumber.size()-4, CreditCardNumber.size());
+    ui->CreditOutput->setText("Ending in " + lastFour);
+    ui->TotalOutput->setText(QString::number(calculateTotalCost()));
 }

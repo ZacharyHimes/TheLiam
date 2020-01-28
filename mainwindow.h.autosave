@@ -34,7 +34,7 @@ private slots:
       * @brief calculateTotalCost Calculates the total cost for the user's stay
       * @return returns the total cost
       */
-     float calculateTotalCost();
+     double calculateTotalCost();
 
      /**
       * @brief calculateRoomCost Calculates the total cost of the room for one night and stores it in the reservationRoom cost.
