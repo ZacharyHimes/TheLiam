@@ -34,6 +34,8 @@ private slots:
       */
      float calculateTotalCost();
 
+     float calculateRoomCost();
+
 
      int on_AdultSpinbox_valueChanged(int numAdults);
 
@@ -48,14 +50,6 @@ private slots:
      void on_AtriumButton_clicked();
 
 
-     void on_visaradio_clicked();
-
-     void on_masterradio_clicked();
-
-     void on_discoradio_clicked();
-
-     void on_americanradio_clicked();
-
      void on_pushButton_2_clicked();
 
 
@@ -64,6 +58,14 @@ private slots:
      void on_proceedButton_clicked();
 
      void on_pushButton_3_clicked();
+
+     void on_DiscoRadio_clicked();
+
+     void on_VisaRadio_clicked();
+
+     void on_MasterRadio_clicked();
+
+     void on_AmericanRadio_clicked();
 
 private:
     int checkButton();
@@ -75,6 +77,12 @@ private:
     int nightsStaying = 0;
     QString CreditCardNumber;
     QString RezName;
+
+    struct Room{
+        QString RoomType;
+        QString BedType;
+        double CostPerNight;
+    }reservationRoom;
 
 
 private:

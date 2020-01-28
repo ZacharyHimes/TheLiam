@@ -17,11 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     //do not know why this is not working. Exactly as Dr. Park did and what I found online
 
-    QString Name = ui->ResInput->text();
-    ui->RezOutput->setText(Name);
 
-    QString Credit = ui->CreditCard->text();
-    ui->CreditOutput->setText(Credit);
 
     //how to output everything
     //ui->FirstOutput->setText();
@@ -52,32 +48,41 @@ void MainWindow::on_WelcomeButton_clicked()
 
 void MainWindow::on_KingButton_clicked()
 {
-
+    reservationRoom.BedType = "King";
     ui->stackedWidget->setCurrentIndex(3);
 
 }
 void MainWindow::on_QueenButton_clicked()
 {
+    reservationRoom.BedType = "2 Queen";
     ui->stackedWidget->setCurrentIndex(3);
 }
+
+
 
 
 float MainWindow::calculateTotalCost()
 {
     float totalCost = -1;
-    if(atriumButton && kingButton)
-        totalCost = 350 * nightsStaying;
-    if(standardButton && kingButton)
-        totalCost = 290 * nightsStaying;
-    if(atriumButton && queenButton)
-        totalCost = 325 * nightsStaying;
-    if(standardButton && queenButton)
-        totalCost = 284 * nightsStaying;
+
+    totalCost = calculateRoomCost() * nightsStaying;
 
     if(parking)
         totalCost += (12.75 * nightsStaying);
 
     return totalCost;
+}
+
+float MainWindow::calculateRoomCost()
+{
+    if(reservationRoom.RoomType == "Atrium" && reservationRoom.BedType == "King")
+        reservationRoom.CostPerNight = 350;
+    if(reservationRoom.RoomType == "Standard" && reservationRoom.BedType == "King")
+        reservationRoom.CostPerNight = 290;
+    if(reservationRoom.RoomType == "Atrium" && reservationRoom.BedType == "2 Queen")
+        reservationRoom.CostPerNight = 325;
+    if(reservationRoom.RoomType == "Standard" && reservationRoom.BedType == "2 Queen")
+        reservationRoom.CostPerNight = 284;
 }
 
 void MainWindow::on_BedProceed_clicked()
@@ -88,11 +93,13 @@ void MainWindow::on_BedProceed_clicked()
 
 void MainWindow::on_StandardButton_clicked()
 {
+    reservationRoom.RoomType = "Standard";
     ui->stackedWidget->setCurrentIndex(4);
 }
 
 void MainWindow::on_AtriumButton_clicked()
 {
+    reservationRoom.RoomType = "Atrium";
     ui->stackedWidget->setCurrentIndex(4);
 }
 
@@ -129,32 +136,6 @@ int MainWindow::on_NumNights_valueChanged(int arg1)
 
 
 
-
-//Credit Cards
-void MainWindow::on_visaradio_clicked()
-{
-    ui->CreditCard->setInputMask("");
-    ui->CreditCard->setInputMask("4999-9999-9999-9999;#");
-}
-
-void MainWindow::on_masterradio_clicked()
-{
-    ui->CreditCard->setInputMask("");
-    ui->CreditCard->setInputMask("5999-9999-9999-9999;#");
-}
-
-void MainWindow::on_discoradio_clicked()
-{
-    ui->CreditCard->setInputMask("");
-    ui->CreditCard->setInputMask("6999-9999-9999-9999;#");
-}
-
-void MainWindow::on_americanradio_clicked()
-{
-    ui->CreditCard->setInputMask("");
-    ui->CreditCard->setInputMask("3999-999999-99999;#");
-}
-
 void MainWindow::on_pushButton_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(8);
@@ -163,7 +144,26 @@ void MainWindow::on_pushButton_2_clicked()
 
 //Confirmation
 
+void MainWindow::on_DiscoRadio_clicked()
+{
+    ui->CardEntryLine->setInputMask("");
+    ui->CardEntryLine->setInputMask("6999-9999-9999-9999;#");
+}
 
+void MainWindow::on_VisaRadio_clicked()
+{
+    ui->CardEntryLine->setInputMask("");
+    ui->CardEntryLine->setInputMask("4999-9999-9999-9999;#");
+}
 
+void MainWindow::on_MasterRadio_clicked()
+{
+    ui->CardEntryLine->setInputMask("");
+    ui->CardEntryLine->setInputMask("5999-9999-9999-9999;#");
+}
 
-
+void MainWindow::on_AmericanRadio_clicked()
+{
+    ui->CardEntryLine->setInputMask("");
+    ui->CardEntryLine->setInputMask("3999-999999-99999;#");
+}
