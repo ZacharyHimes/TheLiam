@@ -157,11 +157,14 @@ void MainWindow::on_ProceedGuests_clicked()
     kidsStaying = ui->NumKidsBox->value();
     parking = ui->ParkingCheckBox->checkState();
 
-    //Generate Cost for total cost page
+    //Generate Costs for total cost page
     ui->RoomTypeEdit->setText(reservationRoom.RoomType);
     ui->BedTypeEdit->setText(reservationRoom.BedType);
     ui->ParkingTypeEdit->setText(parking ? "Yes" : "No");
-    ui->TotalChargeBox->setText(QString::number(calculateTotalCost()));
+    ui->TotalChargeBox->setText(QString::number(calculateTotalCost()* 1.15));
+    ui->PayButtonCharge->setText(QString::number(calculateTotalCost() * 1.15));
+    ui->SubtotalAmount->setText(QString::number(calculateTotalCost()));
+    ui->TaxAmount->setText(QString::number(calculateTotalCost() * .15));
 
     ui->stackedWidget->setCurrentIndex(6);
 }
