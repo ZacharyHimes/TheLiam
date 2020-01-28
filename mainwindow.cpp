@@ -25,19 +25,19 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_WelcomeButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(2);
+    ui->stackedWidget->setCurrentIndex(1);
 }
 
 void MainWindow::on_KingButton_clicked()
 {
     reservationRoom.BedType = "King";
-    ui->stackedWidget->setCurrentIndex(4);
+    ui->stackedWidget->setCurrentIndex(3);
 
 }
 void MainWindow::on_QueenButton_clicked()
 {
     reservationRoom.BedType = "2 Queen";
-    ui->stackedWidget->setCurrentIndex(4);
+    ui->stackedWidget->setCurrentIndex(3);
 }
 
 
@@ -70,34 +70,34 @@ void MainWindow::calculateRoomCost()
 void MainWindow::on_BedProceed_clicked()
 {
 
-    ui->stackedWidget->setCurrentIndex(3);
+    ui->stackedWidget->setCurrentIndex(2);
 }
 
 void MainWindow::on_StandardButton_clicked()
 {
     reservationRoom.RoomType = "Standard";
-    ui->stackedWidget->setCurrentIndex(5);
+    ui->stackedWidget->setCurrentIndex(4);
 }
 
 void MainWindow::on_AtriumButton_clicked()
 {
     reservationRoom.RoomType = "Atrium";
-    ui->stackedWidget->setCurrentIndex(5);
+    ui->stackedWidget->setCurrentIndex(4);
 }
 
 void MainWindow::on_BedProceed_2_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(6);
+    ui->stackedWidget->setCurrentIndex(5);
 }
 
 void MainWindow::on_proceedButton_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(7);
+    ui->stackedWidget->setCurrentIndex(6);
 }
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(8);
+    ui->stackedWidget->setCurrentIndex(7);
 }
 
 
@@ -120,7 +120,7 @@ int MainWindow::on_NumNights_valueChanged(int arg1)
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(8);
+    ui->stackedWidget->setCurrentIndex(7);
 
 }
 
@@ -158,11 +158,12 @@ void MainWindow::on_ProceedGuests_clicked()
     parking = ui->ParkingCheckBox->checkState();
 
     //Generate Cost for total cost page
-    ui->RoomTypeLabel->setText(reservationRoom.RoomType);
-    ui->RoomTypeLabel->setText(reservationRoom.BedType);
-    ui->ParkingTypeEdit->setText(QString (parking));
+    ui->RoomTypeEdit->setText(reservationRoom.RoomType);
+    ui->BedTypeEdit->setText(reservationRoom.BedType);
+    ui->ParkingTypeEdit->setText(parking ? "Yes" : "No");
+    ui->TotalChargeBox->setText(QString::number(calculateTotalCost()));
 
-    ui->stackedWidget->setCurrentIndex(7);
+    ui->stackedWidget->setCurrentIndex(6);
 }
 
 void MainWindow::on_ProceedDatesBttn_clicked()
@@ -175,7 +176,7 @@ void MainWindow::on_ProceedDatesBttn_clicked()
     QDate todaysDate;
     if(nightsStaying > 0 && nightsStaying <= 7)
         if(reservationStartDate >= todaysDate.currentDate())
-            ui->stackedWidget->setCurrentIndex(6);
+            ui->stackedWidget->setCurrentIndex(5);
 }
 
 void MainWindow::on_PayNowButton_clicked()
@@ -185,31 +186,34 @@ void MainWindow::on_PayNowButton_clicked()
 
     ui->ResOutput->setText(RezName);
     ui->FirstOutput->setText(reservationStartDate.toString());
-    ui->ParkOutput->setText(QString (parking));
+    ui->ParkOutput->setText(parking ? "Yes" : "No");
     ui->ResOutput->setText(reservationRoom.RoomType + " " + reservationRoom.BedType);
-    ui->NumAdultOutput->setText(QString (adultsStaying));
-    ui->NumKidsOutput->setText(QString (kidsStaying));
-    QStringRef lastFour(&CreditCardNumber,CreditCardNumber.size()-4, CreditCardNumber.size());
+    ui->NumAdultsOutput->setText(QString::number(adultsStaying));
+    ui->NumKidsOutput->setText(QString::number(kidsStaying));
+    ui->NumNightsOutput->setText(QString::number(nightsStaying));
+    //QStringRef lastFour(&CreditCardNumber,CreditCardNumber.size()-4, CreditCardNumber.size()-2);
+    QString lastFour = CreditCardNumber.right(CreditCardNumber.size()-15);
     ui->CreditOutput->setText("Ending in " + lastFour);
     ui->TotalOutput->setText(QString::number(calculateTotalCost()));
     if(!CreditCardType){
         if(CreditCardNumber.size() == 19)
-            ui->stackedWidget->setCurrentIndex(9);
+            ui->stackedWidget->setCurrentIndex(8);
 
     } else if(CreditCardNumber.size() == 17)
-        ui->stackedWidget->setCurrentIndex(9);
+        ui->stackedWidget->setCurrentIndex(8);
 
 }
 
-void MainWindow::on_pushButton_clicked()
-{
-    RezName = ui->ResInput_2->text();
-
-    if(RezName.size() > 0)
-        ui->stackedWidget->setCurrentIndex(3);
-}
 
 void MainWindow::on_ProceedCharges_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(8);
+    ui->stackedWidget->setCurrentIndex(7);
+}
+
+void MainWindow::on_ResProceedButton_clicked()
+{
+    RezName = ui->ResInput->text();
+
+    if(RezName.size() > 0)
+          ui->stackedWidget->setCurrentIndex(2);
 }

@@ -78,9 +78,9 @@ private slots:
 
      void on_PayNowButton_clicked();
 
-     void on_pushButton_clicked();
-
      void on_ProceedCharges_clicked();
+
+     void on_ResProceedButton_clicked();
 
 private:
     int checkButton();
