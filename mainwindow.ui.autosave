@@ -469,7 +469,7 @@
      <string notr="true">background-color: rgb(198, 218, 248);</string>
     </property>
     <property name="currentIndex">
-     <number>8</number>
+     <number>6</number>
     </property>
     <widget class="QWidget" name="page"/>
     <widget class="QWidget" name="WelcomePage">
@@ -1295,45 +1295,14 @@ a.QpushButton a:hover
        <string>Proceed </string>
       </property>
      </widget>
-     <widget class="QPushButton" name="YesParking">
+     <widget class="QCheckBox" name="ParkingCheckBox">
       <property name="geometry">
        <rect>
-        <x>220</x>
+        <x>270</x>
         <y>230</y>
-        <width>131</width>
-        <height>41</height>
+        <width>86</width>
+        <height>20</height>
        </rect>
-      </property>
-      <property name="text">
-       <string>Yes</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="NoParking">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>230</y>
-        <width>131</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>No</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_4">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>200</y>
-        <width>71</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>18</pointsize>
-       </font>
       </property>
       <property name="text">
        <string>Parking?</string>
@@ -1341,7 +1310,7 @@ a.QpushButton a:hover
      </widget>
     </widget>
     <widget class="QWidget" name="TotalCharge">
-     <widget class="QLabel" name="label_7">
+     <widget class="QLabel" name="TotalChargesHeader">
       <property name="geometry">
        <rect>
         <x>290</x>
@@ -1359,7 +1328,7 @@ a.QpushButton a:hover
        <string>Total Charges</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="ProceedCharges">
       <property name="geometry">
        <rect>
         <x>330</x>
@@ -1372,7 +1341,7 @@ a.QpushButton a:hover
        <string>Proceed</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_10">
+     <widget class="QLabel" name="RoomTypeEdit">
       <property name="geometry">
        <rect>
         <x>420</x>
@@ -1385,10 +1354,23 @@ a.QpushButton a:hover
        <string>TextLabel</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_11">
+     <widget class="QLabel" name="BedTypeLabel">
       <property name="geometry">
        <rect>
         <x>250</x>
+        <y>150</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Bed Type</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="BedTypeEdit">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
         <y>150</y>
         <width>59</width>
         <height>16</height>
@@ -1398,20 +1380,7 @@ a.QpushButton a:hover
        <string>TextLabel</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_12">
-      <property name="geometry">
-       <rect>
-        <x>420</x>
-        <y>140</y>
-        <width>59</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_13">
+     <widget class="QLabel" name="ParkingTypeLabel">
       <property name="geometry">
        <rect>
         <x>250</x>
@@ -1421,27 +1390,27 @@ a.QpushButton a:hover
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Parking</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_14">
+     <widget class="QLabel" name="RoomType">
       <property name="geometry">
        <rect>
         <x>250</x>
         <y>120</y>
-        <width>59</width>
+        <width>81</width>
         <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Room Type</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_15">
+     <widget class="QLabel" name="ParkingTypeEdit">
       <property name="geometry">
        <rect>
         <x>420</x>
-        <y>170</y>
+        <y>180</y>
         <width>59</width>
         <height>16</height>
        </rect>
@@ -1452,7 +1421,7 @@ a.QpushButton a:hover
      </widget>
     </widget>
     <widget class="QWidget" name="PaymentInfo">
-     <widget class="QRadioButton" name="visaradio">
+     <widget class="QRadioButton" name="VisaRadio">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -1465,7 +1434,7 @@ a.QpushButton a:hover
        <string>Visa</string>
       </property>
      </widget>
-     <widget class="QRadioButton" name="masterradio">
+     <widget class="QRadioButton" name="MasterRadio">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -1478,7 +1447,7 @@ a.QpushButton a:hover
        <string>MasterCard</string>
       </property>
      </widget>
-     <widget class="QRadioButton" name="discoradio">
+     <widget class="QRadioButton" name="DiscoverRadio">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -1491,7 +1460,7 @@ a.QpushButton a:hover
        <string>Discover</string>
       </property>
      </widget>
-     <widget class="QRadioButton" name="americanradio">
+     <widget class="QRadioButton" name="AmericanRadio">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -1504,7 +1473,7 @@ a.QpushButton a:hover
        <string>American Express</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="PayNowButton">
       <property name="geometry">
        <rect>
         <x>310</x>
@@ -1535,7 +1504,7 @@ a.QpushButton a:hover
        <string>Check  Out</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="CreditCard">
+     <widget class="QLineEdit" name="CreditCardInfo">
       <property name="geometry">
        <rect>
         <x>300</x>
