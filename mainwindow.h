@@ -86,6 +86,8 @@ private slots:
 
      void on_NumKidsBox_valueChanged(int arg1);
 
+     //void on_CreditExp_editingFinished();
+
 private:
     const int ATRIUM_KING = 350;
     const int STANDARD_KING = 290;

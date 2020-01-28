@@ -118,15 +118,11 @@ int MainWindow::on_NumNights_valueChanged(int arg1)
     return arg1;
 }
 
-
-
 void MainWindow::on_pushButton_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(7);
 
 }
-
-//Confirmation
 
 void MainWindow::on_DiscoRadio_clicked()
 {
@@ -245,3 +241,11 @@ void MainWindow::on_NumKidsBox_valueChanged(int arg1)
             ui->NumAdultsBox->setMaximum(maxPeople - ui->NumKidsBox->value());
     }
 }
+
+/*void MainWindow::on_CreditExp_editingFinished()
+{
+    QString month = ui->CreditExp->text();
+    QString year = ui->CreditExp->text();
+    month = month.remove(3, 2);
+    year = year.remove(0, 3);
+}*/

@@ -27,7 +27,7 @@
      <string notr="true">background-color: rgba(68, 67, 85, 228);</string>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>7</number>
     </property>
     <widget class="QWidget" name="WelcomePage">
      <widget class="QLabel" name="LiamLogo">
@@ -1618,6 +1618,48 @@ border: 2px solid white;</string>
        </property>
       </widget>
      </widget>
+     <widget class="QLabel" name="ExpLabel">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>320</y>
+        <width>90</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Expiration Date</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="MonthSpin">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>320</y>
+        <width>42</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>12</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="YearSpin">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>320</y>
+        <width>42</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>20</number>
+      </property>
+      <property name="maximum">
+       <number>50</number>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_7">
      <widget class="QPushButton" name="ConfirmButton">
@@ -2060,7 +2102,7 @@ border: 2px solid white;</string>
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>20</height>
+     <height>24</height>
     </rect>
    </property>
   </widget>

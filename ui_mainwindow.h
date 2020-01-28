@@ -103,6 +103,9 @@ public:
     QLineEdit *CreditInfo;
     QFrame *frame;
     QLabel *label_4;
+    QLabel *ExpLabel;
+    QSpinBox *spinBox;
+    QSpinBox *spinBox_2;
     QWidget *page_7;
     QPushButton *ConfirmButton;
     QFrame *frame_41;
@@ -744,6 +747,18 @@ public:
         label_4->setFont(font11);
         label_4->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);"));
         label_4->setAlignment(Qt::AlignCenter);
+        ExpLabel = new QLabel(page_6);
+        ExpLabel->setObjectName(QString::fromUtf8("ExpLabel"));
+        ExpLabel->setGeometry(QRect(230, 320, 90, 30));
+        spinBox = new QSpinBox(page_6);
+        spinBox->setObjectName(QString::fromUtf8("spinBox"));
+        spinBox->setGeometry(QRect(350, 320, 42, 23));
+        spinBox->setMaximum(12);
+        spinBox_2 = new QSpinBox(page_6);
+        spinBox_2->setObjectName(QString::fromUtf8("spinBox_2"));
+        spinBox_2->setGeometry(QRect(400, 320, 42, 23));
+        spinBox_2->setMinimum(20);
+        spinBox_2->setMaximum(50);
         stackedWidget->addWidget(page_6);
         page_7 = new QWidget();
         page_7->setObjectName(QString::fromUtf8("page_7"));
@@ -867,7 +882,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 20));
+        menubar->setGeometry(QRect(0, 0, 800, 24));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -875,7 +890,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(5);
+        stackedWidget->setCurrentIndex(7);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -931,6 +946,7 @@ public:
         DiscoRadio->setText(QCoreApplication::translate("MainWindow", "Discover", nullptr));
         PayNowButton->setText(QCoreApplication::translate("MainWindow", "Pay Now", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "Payment Info", nullptr));
+        ExpLabel->setText(QCoreApplication::translate("MainWindow", "Expiration Date", nullptr));
         ConfirmButton->setText(QCoreApplication::translate("MainWindow", "Thank you for choosing Liam Hotels", nullptr));
         ResOutput->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         label_28->setText(QCoreApplication::translate("MainWindow", "Room Type", nullptr));
