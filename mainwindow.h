@@ -47,23 +47,20 @@ private slots:
 
      void on_AtriumButton_clicked();
 
-
-     void on_visaradio_clicked();
-
-     void on_masterradio_clicked();
-
-     void on_discoradio_clicked();
-
-     void on_americanradio_clicked();
+    void on_MasterRadio_clicked();
+    void on_DiscoRadio_clicked();
+    void on_AmericanRadio_clicked();
 
      void on_pushButton_2_clicked();
-
+    void on_VisaRadio_clicked();
 
      void on_BedProceed_2_clicked();
 
      void on_proceedButton_clicked();
 
      void on_pushButton_3_clicked();
+
+
 
 private:
     int checkButton();

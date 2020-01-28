@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>20</y>
+      <y>10</y>
       <width>731</width>
       <height>531</height>
      </rect>
@@ -471,33 +471,14 @@
     <property name="currentIndex">
      <number>8</number>
     </property>
-    <widget class="QWidget" name="page"/>
     <widget class="QWidget" name="WelcomePage">
-     <widget class="QLabel" name="label">
-      <property name="geometry">
-       <rect>
-        <x>250</x>
-        <y>170</y>
-        <width>251</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>24</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Welcome to KLZ Hotels!</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="WelcomeButton">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>280</y>
-        <width>231</width>
-        <height>41</height>
+        <x>290</x>
+        <y>220</y>
+        <width>150</width>
+        <height>150</height>
        </rect>
       </property>
       <property name="palette">
@@ -515,9 +496,9 @@
          <colorrole role="Button">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>30</red>
-            <green>39</green>
-            <blue>67</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -542,18 +523,18 @@
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>30</red>
-            <green>39</green>
-            <blue>67</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
          <colorrole role="Window">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>30</red>
-            <green>39</green>
-            <blue>67</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -580,9 +561,9 @@
          <colorrole role="Button">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>30</red>
-            <green>39</green>
-            <blue>67</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -607,18 +588,18 @@
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>30</red>
-            <green>39</green>
-            <blue>67</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
          <colorrole role="Window">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>30</red>
-            <green>39</green>
-            <blue>67</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -645,9 +626,9 @@
          <colorrole role="Button">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>30</red>
-            <green>39</green>
-            <blue>67</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -672,18 +653,18 @@
          <colorrole role="Base">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>30</red>
-            <green>39</green>
-            <blue>67</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
          <colorrole role="Window">
           <brush brushstyle="SolidPattern">
            <color alpha="255">
-            <red>30</red>
-            <green>39</green>
-            <blue>67</blue>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
            </color>
           </brush>
          </colorrole>
@@ -706,8 +687,13 @@
        <bool>false</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(30, 39, 67);
-color: rgb(255, 255, 255);</string>
+       <string notr="true">QPushButton
+{
+	height: 300px;
+	width: 300px;
+	background-color: rgb(0, 0, 0);
+}
+</string>
       </property>
       <property name="text">
        <string>Reserve a Room</string>
@@ -719,14 +705,14 @@ color: rgb(255, 255, 255);</string>
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>330</x>
+        <x>200</x>
         <y>80</y>
-        <width>81</width>
+        <width>351</width>
         <height>81</height>
        </rect>
       </property>
       <property name="text">
-       <string>      Logo</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/Logo3.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </widget>
@@ -746,7 +732,7 @@ color: rgb(255, 255, 255);</string>
        <rect>
         <x>270</x>
         <y>240</y>
-        <width>121</width>
+        <width>201</width>
         <height>30</height>
        </rect>
       </property>
@@ -976,6 +962,9 @@ a.QpushButton a:hover
        <font>
         <pointsize>40</pointsize>
        </font>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1225,7 +1214,7 @@ a.QpushButton a:hover
        <rect>
         <x>270</x>
         <y>60</y>
-        <width>171</width>
+        <width>231</width>
         <height>31</height>
        </rect>
       </property>
@@ -1302,7 +1291,7 @@ a.QpushButton a:hover
        <rect>
         <x>270</x>
         <y>230</y>
-        <width>86</width>
+        <width>161</width>
         <height>20</height>
        </rect>
       </property>
@@ -1415,6 +1404,19 @@ a.QpushButton a:hover
         <y>180</y>
         <width>59</width>
         <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="TotalChargeBox">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>210</y>
+        <width>77</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="text">
@@ -1555,9 +1557,9 @@ a.QpushButton a:hover
      <widget class="QLabel" name="NumNightsLabel">
       <property name="geometry">
        <rect>
-        <x>90</x>
+        <x>70</x>
         <y>150</y>
-        <width>100</width>
+        <width>151</width>
         <height>30</height>
        </rect>
       </property>
@@ -1810,7 +1812,7 @@ a.QpushButton a:hover
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>28</height>
     </rect>
    </property>
   </widget>

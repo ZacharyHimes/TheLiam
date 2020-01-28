@@ -17,11 +17,11 @@ MainWindow::MainWindow(QWidget *parent)
 
     //do not know why this is not working. Exactly as Dr. Park did and what I found online
 
-    QString Name = ui->ResInput->text();
-    ui->RezOutput->setText(Name);
+   // QString Name = ui->ResInput->text();
+    //ui->RezOutput->setText(Name);
 
-    QString Credit = ui->CreditCard->text();
-    ui->CreditOutput->setText(Credit);
+    //QString Credit = ui->CreditCard->text();
+    //ui->CreditOutput->setText(Credit);
 
     //how to output everything
     //ui->FirstOutput->setText();
@@ -131,28 +131,29 @@ int MainWindow::on_NumNights_valueChanged(int arg1)
 
 
 //Credit Cards
-void MainWindow::on_visaradio_clicked()
+void MainWindow::on_VisaRadio_clicked()
 {
-    ui->CreditCard->setInputMask("");
-    ui->CreditCard->setInputMask("4999-9999-9999-9999;#");
+
+    ui->CardEntryLine->setInputMask("");
+    ui->CardEntryLine->setInputMask("4999-9999-9999-9999;#");
 }
 
-void MainWindow::on_masterradio_clicked()
+void MainWindow::on_MasterRadio_clicked()
 {
-    ui->CreditCard->setInputMask("");
-    ui->CreditCard->setInputMask("5999-9999-9999-9999;#");
+    ui->CardEntryLine->setInputMask("");
+    ui->CardEntryLine->setInputMask("5999-9999-9999-9999;#");
 }
 
-void MainWindow::on_discoradio_clicked()
+void MainWindow::on_DiscoRadio_clicked()
 {
-    ui->CreditCard->setInputMask("");
-    ui->CreditCard->setInputMask("6999-9999-9999-9999;#");
+    ui->CardEntryLine->setInputMask("");
+    ui->CardEntryLine->setInputMask("6999-9999-9999-9999;#");
 }
 
-void MainWindow::on_americanradio_clicked()
+void MainWindow::on_AmericanRadio_clicked()
 {
-    ui->CreditCard->setInputMask("");
-    ui->CreditCard->setInputMask("3999-999999-99999;#");
+    ui->CardEntryLine->setInputMask("");
+    ui->CardEntryLine->setInputMask("3999-999999-99999;#");
 }
 
 void MainWindow::on_pushButton_2_clicked()
