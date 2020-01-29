@@ -40,7 +40,7 @@ private slots:
       * @brief calculateRoomCost Calculates the total cost of the room for one night and stores it in the reservationRoom cost.
       */
      void calculateRoomCost();
-
+     double subTotal();
 
      int on_AdultSpinbox_valueChanged(int numAdults);
 
@@ -86,6 +86,17 @@ private slots:
 
      void on_NumKidsBox_valueChanged(int arg1);
 
+
+
+     void on_ProceedCharges_6_clicked();
+
+
+     void on_ExitButton_clicked();
+
+
+
+     void on_NumAdultsBox_textChanged(const QString &arg1);
+
 private:
     const int ATRIUM_KING = 350;
     const int STANDARD_KING = 290;
@@ -103,7 +114,6 @@ private:
     QString RezName;
     QDate reservationStartDate;
     QString ExpirationDate;
-
     struct Room{
         QString RoomType;
         QString BedType;

@@ -49,10 +49,19 @@ double MainWindow::calculateTotalCost()
 {
     float totalCost = -1;
     calculateRoomCost();
-    totalCost =  reservationRoom.CostPerNight * nightsStaying;
+    totalCost =  reservationRoom.CostPerNight * nightsStaying * 1.15;
 
     if(parking)
         totalCost += (12.75 * nightsStaying);
+        totalCost += (15 * nightsStaying);
+    return totalCost;
+}
+double MainWindow::subTotal()
+{
+    float totalCost = -1;
+    calculateRoomCost();
+    totalCost =  reservationRoom.CostPerNight * nightsStaying;
+
 
     return totalCost;
 }
@@ -128,18 +137,21 @@ void MainWindow::on_DiscoRadio_clicked()
 {
     ui->CreditInfo->setInputMask("");
     ui->CreditInfo->setInputMask("6999-9999-9999-9999;#");
+
+
 }
 
 void MainWindow::on_VisaRadio_clicked()
 {
     ui->CreditInfo->setInputMask("");
     ui->CreditInfo->setInputMask("4999-9999-9999-9999;#");
-}
 
+}
 void MainWindow::on_MasterRadio_clicked()
 {
     ui->CreditInfo->setInputMask("");
     ui->CreditInfo->setInputMask("5999-9999-9999-9999;#");
+
 }
 
 void MainWindow::on_AmericanRadio_clicked()
@@ -147,6 +159,7 @@ void MainWindow::on_AmericanRadio_clicked()
     ui->CreditInfo->setInputMask("");
     ui->CreditInfo->setInputMask("3999-999999-99999;#");
     CreditCardType = true;
+
 }
 
 void MainWindow::on_ProceedGuests_clicked()
@@ -159,14 +172,13 @@ void MainWindow::on_ProceedGuests_clicked()
     ui->RoomTypeEdit->setText(reservationRoom.RoomType);
     ui->BedTypeEdit->setText(reservationRoom.BedType);
     ui->ParkingTypeEdit->setText(parking ? "Yes" : "No");
-    ui->TotalChargeBox->setText(QString::number(calculateTotalCost()* 1.15));
-    ui->PayButtonCharge->setText(QString::number(calculateTotalCost() * 1.15));
-    ui->SubtotalAmount->setText(QString::number(calculateTotalCost()));
-    ui->TaxAmount->setText(QString::number(calculateTotalCost() * .15));
+    ui->TotalChargeBox->setText(QString::number(calculateTotalCost()) );
+    ui->ProceedCharges->setText("Pay Now: $" + QString::number(calculateTotalCost()));
+    ui->SubtotalAmount->setText(QString::number(subTotal()));
+    ui->TaxAmount->setText(QString::number(subTotal() * .15));
 
     ui->stackedWidget->setCurrentIndex(6);
 }
-
 void MainWindow::on_ProceedDatesBttn_clicked()
 {
     reservationStartDate = ui->CalendarWidget->selectedDate();
@@ -192,9 +204,13 @@ void MainWindow::on_PayNowButton_clicked()
     ui->NumAdultsOutput->setText(QString::number(adultsStaying));
     ui->NumKidsOutput->setText(QString::number(kidsStaying));
     ui->NumNightsOutput->setText(QString::number(nightsStaying));
-    QString lastFour = CreditCardNumber.right(CreditCardNumber.size()-15);
+    QString lastFour;
+    if(!CreditCardType)
+         lastFour = CreditCardNumber.right(CreditCardNumber.size()-15);
+    else
+        lastFour = CreditCardNumber.right(CreditCardNumber.size()-13);
     ui->CreditOutput->setText("Ending in " + lastFour);
-    ui->TotalOutput->setText(QString::number(calculateTotalCost()));
+    ui->TotalOutput->setText(QString::number(calculateTotalCost()) );
     if(!CreditCardType){
         if(CreditCardNumber.size() == 19)
             ui->stackedWidget->setCurrentIndex(8);
@@ -202,11 +218,10 @@ void MainWindow::on_PayNowButton_clicked()
     } else if(CreditCardNumber.size() == 17)
         ui->stackedWidget->setCurrentIndex(8);
 
-
     ExpirationDate = QString::number(ui->MonthSpin->value());
-    ExpirationDate += "/";
-    ExpirationDate += QString::number(ui->YearSpin->value());
-    ui->ExpOutput->setText(ExpirationDate);
+       ExpirationDate += "/";
+       ExpirationDate += QString::number(ui->YearSpin->value());
+       //ui->ExpOutput->setText(ExpirationDate);
 }
 
 
@@ -245,4 +260,24 @@ void MainWindow::on_NumKidsBox_valueChanged(int arg1)
         maxPeople = 4;
             ui->NumAdultsBox->setMaximum(maxPeople - ui->NumKidsBox->value());
     }
+}
+
+
+
+void MainWindow::on_ProceedCharges_6_clicked()
+{
+  ui->stackedWidget->setCurrentIndex(1);
+}
+
+
+void MainWindow::on_ExitButton_clicked()
+{
+     QApplication::quit();
+}
+
+
+
+void MainWindow::on_NumAdultsBox_textChanged(const QString &arg1)
+{
+    return;
 }
