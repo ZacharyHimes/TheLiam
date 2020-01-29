@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QString>
+#include <QDate>
+#include <QStringRef>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -32,8 +34,13 @@ private slots:
       * @brief calculateTotalCost Calculates the total cost for the user's stay
       * @return returns the total cost
       */
-     float calculateTotalCost();
+     double calculateTotalCost();
 
+     /**
+      * @brief calculateRoomCost Calculates the total cost of the room for one night and stores it in the reservationRoom cost.
+      */
+     void calculateRoomCost();
+     double subTotal();
 
      int on_AdultSpinbox_valueChanged(int numAdults);
 
@@ -48,14 +55,6 @@ private slots:
      void on_AtriumButton_clicked();
 
 
-     void on_visaradio_clicked();
-
-     void on_masterradio_clicked();
-
-     void on_discoradio_clicked();
-
-     void on_americanradio_clicked();
-
      void on_pushButton_2_clicked();
 
 
@@ -65,7 +64,44 @@ private slots:
 
      void on_pushButton_3_clicked();
 
+     void on_DiscoRadio_clicked();
+
+     void on_VisaRadio_clicked();
+
+     void on_MasterRadio_clicked();
+
+     void on_AmericanRadio_clicked();
+
+     void on_ProceedGuests_clicked();
+
+     void on_ProceedDatesBttn_clicked();
+
+     void on_PayNowButton_clicked();
+
+     void on_ProceedCharges_clicked();
+
+     void on_ResProceedButton_clicked();
+
+     void on_NumAdultsBox_valueChanged(int arg1);
+
+     void on_NumKidsBox_valueChanged(int arg1);
+
+
+
+     void on_ProceedCharges_6_clicked();
+
+
+     void on_ExitButton_clicked();
+
+
+
+     void on_NumAdultsBox_textChanged(const QString &arg1);
+
 private:
+    const int ATRIUM_KING = 350;
+    const int STANDARD_KING = 290;
+    const int ATRIUM_QUEEN = 325;
+    const int STANDARD_QUEEN = 284;
     int checkButton();
     bool kingButton,atriumButton, queenButton, standardButton;
     bool bedProceed = false;
@@ -73,8 +109,16 @@ private:
     int adultsStaying = 0;
     int kidsStaying = 0;
     int nightsStaying = 0;
+    bool CreditCardType = false; //If false, it is not American and has 16 characters
     QString CreditCardNumber;
     QString RezName;
+    QDate reservationStartDate;
+    QString ExpirationDate;
+    struct Room{
+        QString RoomType;
+        QString BedType;
+        double CostPerNight;
+    }reservationRoom;
 
 
 private:
